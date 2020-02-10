@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(55, 55, 56);
+    background-color: rgb(249, 249, 252);
 }
 
 h1 {
@@ -12,7 +12,8 @@ img {
     border-radius: 5%;
 }
 
-h2 {
-    color: white;
-    margin-left: 100px;
+h4 {
+    font-style: italic;
+    color: rgb(8, 8, 8);
+    margin-left: 110px;
 }
