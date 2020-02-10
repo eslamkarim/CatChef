@@ -1,12 +1,5 @@
-var recipe = localStorage.getItem("recipes");
 var recipeName = getParameterByName('name');
-var recipeData;
-JSON.parse(recipe).forEach(element => {
-    if(element.name.includes(recipeName)){
-        recipeData = element;
-        console.log(recipeData);
-    }
-});
+var recipeData= SearchByRecipeName(recipeName);
 
 document.getElementById("recipeName").textContent = recipeData.name;
 
