@@ -1,5 +1,5 @@
+var recipe = localStorage.getItem("recipes");
 function SearchByRecipeName(recipeName){
-    var recipe = localStorage.getItem("recipes");
     var RecipeData;
     JSON.parse(recipe).forEach(element => {
         if(element.name.match(recipeName)){
@@ -7,4 +7,14 @@ function SearchByRecipeName(recipeName){
         }
     });
     return RecipeData;
+}
+
+function SearchAllRecipes(recipeName){
+    var RecipesArray = new Array();
+    JSON.parse(recipe).forEach(element => {
+        if(element.name.includes(recipeName)){
+            RecipesArray.push(element);
+        }
+    });
+    return RecipesArray;
 }
