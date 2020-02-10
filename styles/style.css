@@ -1,18 +1,18 @@
-body {
+#body {
     background-color: rgb(55, 55, 56);
 }
 
-h1 {
+#h1 {
     color: rgb(141, 16, 16);
     margin-left: 80px;
 }
 
-img {
+#img {
     margin-left: 80px;
     border-radius: 5%;
 }
 
-h2 {
+#h2 {
     color: white;
     margin-left: 100px;
 }
