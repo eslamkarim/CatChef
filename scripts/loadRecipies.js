@@ -16,7 +16,7 @@ function readTextFile(file, callback) {
 readTextFile("recipes.json", function(text){
     recipeJSON = JSON.parse(text);
     recipeJSON.recipes.forEach(element => {
-        var recipeObj = new Recipe(element.title,element.ingredients,element.photo_url,element.rating_stars);
+        var recipeObj = new Recipe(element.title,element.ingredients,element.instructions,element.description,element.photo_url,element.rating_stars);
         recipes.push(recipeObj);
     });;
     localStorage.setItem('recipes', JSON.stringify(recipes));

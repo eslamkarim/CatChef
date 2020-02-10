@@ -1,2 +1,6 @@
 var recipe = localStorage.getItem("recipes");
-console.log(JSON.parse(recipe)[0].name);
+var recipeName = getParameterByName('name');
+JSON.parse(recipe).forEach(element => {
+    if(element.name.includes(recipeName))
+        console.log(element);
+});
