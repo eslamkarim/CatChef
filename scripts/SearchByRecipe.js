@@ -1,6 +1,6 @@
 var recipe = localStorage.getItem("recipes");
 function SearchByRecipeName(recipeName){
-    var RecipeData;
+    var RecipeData=null;
     JSON.parse(recipe).forEach(element => {
         if(element.name.match(recipeName)){
             RecipeData = element;
