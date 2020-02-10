@@ -2,16 +2,14 @@ class Recipe{
     name;
     ingredients= new Array();
     image;
-    video;
     rating;
 
-    constructor(name,ingredients,image,video,rating){
+    constructor(name,ingredients,image,rating){
         this.name=name;
         ingredients.forEach(element => {
             this.ingredients.push(element);            
         });
         this.image=image;
-        this.video=video;
         this.rating=rating;
     }
     setName(name){
@@ -33,12 +31,6 @@ class Recipe{
     }
     getImage(){
         return this.image;
-    }
-    setVideo(vid){
-        this.video=vid;
-    }
-    getVideo(){
-        return this.video;
     }
     setRating(rate){
         this.rating=rate;
