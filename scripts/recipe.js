@@ -2,17 +2,21 @@ class Recipe{
     name;
     ingredients= new Array();
     image;
-    video;
+    description;
+    instructions = new Array();
     rating;
 
-    constructor(name,ingredients,image,video,rating){
+    constructor(name,ingredients,instructions,description,image,rating){
         this.name=name;
         ingredients.forEach(element => {
             this.ingredients.push(element);            
         });
         this.image=image;
-        this.video=video;
         this.rating=rating;
+        instructions.forEach(element => {
+            this.instructions.push(element);            
+        });
+        this.description=description;
     }
     setName(name){
         this.name=name;
@@ -28,17 +32,25 @@ class Recipe{
     getIngredients(){
         return this.ingredients;
     }
+    setInstructions(instructions){
+        instructions.forEach(element => {
+            this.instructions.push(element);            
+        });
+    }
+    getInstructions(){
+        return this.instructions;
+    }
+    setDescription(description){
+        this.description=description;
+    }
+    getDescription(){
+        return this.description;
+    }
     setImage(img){
         this.image=img;
     }
     getImage(){
         return this.image;
-    }
-    setVideo(vid){
-        this.video=vid;
-    }
-    getVideo(){
-        return this.video;
     }
     setRating(rate){
         this.rating=rate;
