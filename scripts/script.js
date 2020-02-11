@@ -1,14 +1,19 @@
-var content = document.getElementById("content");
-load_home();
-$('#home-btn').click(function(){
-    load_home();
-})
+$(function(){
+    $("#nav-placeholder").load("html/nav.html");
+  });
+// var content = document.getElementById("content");
+// load_home();
+// $('#home-btn').click(function(){
+//     load_home();
+// })
 $('#recipes-btn').click(function(){
-    $('#content').load('../recipes.html #container');
+    
 })
-function load_home() {
-    $('#content').load('../html/landing-page.html #container');
-}
+// function load_home() {
+//     $('#content').load('../html/landing-page.html #container');
+// }
+// function load_recipes() {
+//     $('#content').load('../recipes.html')}
 // content.addEventListener("load", load_home)
 // content.style.width = window.innerWidth;
 // var html;

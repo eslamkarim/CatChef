@@ -1,6 +1,6 @@
-var recipeName = getParameterByName('name');
-var recipeData= SearchByRecipeName(recipeName);
-
+var recipeName = sessionStorage.getItem('recipe-name');
+var recipeData = SearchByRecipeName(recipeName);
+console.log("TESTTTTTTT")
 if (recipeData == undefined || recipeData == ""){
     window.location.href = "../NotFound.html"
 } else {
