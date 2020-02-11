@@ -1,11 +1,14 @@
 var recipe = localStorage.getItem("recipes");
 function SearchByRecipeName(recipeName){
-    var RecipeData=null;
-    JSON.parse(recipe).forEach(element => {
-        if(element.name.match(recipeName)){
-            RecipeData = element;
-        }
-    });
+    var RecipeData=null;    
+    if(!/^ *$/.test(recipeName) && typeof(recipeName) != "undefined"){
+        var regex = new RegExp("^" + recipeName + "$");
+        JSON.parse(recipe).forEach(element => {
+            if(element.name.match(regex)){
+                RecipeData = element;
+            }
+        });
+    }
     return RecipeData;
 }
 
