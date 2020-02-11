@@ -1,9 +1,14 @@
 var content = document.getElementById("content");
-$('#content').load('../html/landing-page.html #container');
-
-// function load_home() {
-//     content.innerHTML = '<object type="text/html" data="../html/landing-page.html"></object>';
-// }
+load_home();
+$('#home-btn').click(function(){
+    load_home();
+})
+$('#recipes-btn').click(function(){
+    $('#content').load('../recipes.html #container');
+})
+function load_home() {
+    $('#content').load('../html/landing-page.html #container');
+}
 // content.addEventListener("load", load_home)
 // content.style.width = window.innerWidth;
 // var html;
