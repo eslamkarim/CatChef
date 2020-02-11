@@ -14,8 +14,9 @@ function SearchByRecipeName(recipeName){
 
 function SearchAllRecipes(recipeName){
     var RecipesArray = new Array();
+    var regex = new RegExp("^" + recipeName + "$","i");
     JSON.parse(recipe).forEach(element => {
-        if(element.name.includes(recipeName)){
+        if(element.name.toLowerCase().includes(recipeName.toLowerCase())){
             RecipesArray.push(element);
         }
     });
