@@ -315,3 +315,8 @@ top: 400px;
     color: white;
     margin-left: 100px;
 }
+#recipeDesc {
+    font-style: italic;
+    color: rgb(8, 8, 8);
+    margin-left: 110px;
+}
