@@ -1,0 +1,322 @@
+/* body */
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    font: inherit;
+    line-height: 1;
+    /* background-color: rgb(107, 106, 107); */
+    background-color: #ffffff;
+}
+
+/* container */
+
+.container {
+    float:left;
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+}
+
+/* Header */
+
+#header{
+    position: absolute;
+    width: 1444px;
+    height: 435px;
+    left: 0px;
+    top: 0px;
+
+    background: #4C4B59;
+}
+
+#header.alt {
+       background-color: rgb(143, 138, 143);
+       padding: 0px ;
+       height: 300px;
+       text-align: center;
+    }
+
+/* Nav */
+#nav {
+   
+    color: rgba(246, 163, 9, 0.952);
+    position: absolute;
+    width: 100%;
+    padding-top: 0;
+    cursor: default;
+    
+}
+
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul li {
+    float: left;
+    margin-left: 55px;  
+    padding-right: 60px;
+    vertical-align: middle;
+}
+
+#nav ul li a {
+        display: inline-block;
+        height: 2.25em;
+        padding-top: 130px;
+        border: 0;
+        text-decoration: none;
+        font-size: 30px;
+        color: rgba(246, 163, 9, 0.952);
+}
+
+#nav ul li .logo{
+
+    display: inline-block;
+    padding: 0 1.25em;
+   
+    
+}
+
+#nav ul li .logo img{
+   
+    padding-top: 0;
+    width: 300px;
+    height: 300px;
+}
+
+/*
+#nav ul li .h1{
+    padding-top: 0;
+    margin: 0 0 0.25em 0;
+    color: rgba(246, 163, 9, 0.952);
+   
+}
+*/
+/* #curveCanvas{
+    width: 100%;
+    height: 200px;
+    background-color: peru;
+} */
+
+
+/*  Recipe Of Day */
+.resipe_of_day{
+position: absolute;
+width: 1155px;
+height: 485px;
+left: 121px;
+top: 400px;
+}
+
+.title_cookies{
+   
+    /* Recipe of the day */
+
+
+        position: absolute;
+        width: 595px;
+        height: 58px;
+        left: 253px;
+        top: 420px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: center;
+
+        color: #4C4B59;
+            /* text-align:right; */
+}
+
+ /* cookies */
+.cookies{
+
+    position: absolute;
+    width: 492px;
+    height: 284px;
+    left: 145px;
+    top:450px;
+    background-image: url(../imgs/cookies.png);
+    /* border: 1px solid #000000; */
+    /* box-sizing: border-box; */
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 31px;
+
+}
+.delicious_cookies{
+    position: absolute;
+    width: 450px;
+    height: 179px;
+    left: 670px;
+    top: 500px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #CA8254;
+}
+
+.left_arrow{
+    position: absolute;
+    width: 60.47px;
+    height: 52.45px;
+    left: -32px;
+    top:250px;
+
+    background-image: url(../imgs/left_arrow.png);
+    border-radius: 43px;
+    /* transform: rotate(179.41deg); */
+}
+
+.right_arrow{
+
+    position: absolute;
+    width: 60.47px;
+    height: 52.45px;
+    left: 1155px;
+    top: 250px;
+    background-image: url(../imgs/right_arrow.png);
+    border-radius: 43px;
+    /* transform: rotate(-0.18deg); */
+}
+
+  /* Recipes Slides  */
+.recipes_slides{
+
+    position: absolute;
+    width: 1184px;
+    height: 529px;
+    left: 100px;
+    top: 1000px;
+
+    background: #FFFFFF;
+    border: 5px solid #F69553;
+    box-sizing: border-box;
+
+}
+
+.mySlides{
+  
+    width: 356px;
+    height: 460px;
+    background: #FFFFFF;
+
+}
+
+.recipe_name{
+
+    /* Recipe name */
+
+    position: absolute;
+    width: 122px;
+    height: 60px;
+    left: 128px;
+    top: 15px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.slide_img{
+    /* cookies */
+
+    position: absolute;
+    width: 251px;
+    height: 207px;
+    left: 53px;
+    top: 45px;
+
+    background-image: url(../imgs/cookies.png);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 31px;
+}
+
+.rate{
+
+    position: absolute;
+    width: 120px;
+    height: 24px;
+    left: 122px;
+    top: 271px;
+}
+
+.cookies_description{
+
+    position: absolute;
+    width: 272px;
+    height: 142px;
+    left: 40px;
+    top: 295px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #CA8254;
+
+}
+
+.slide1{
+    position: absolute;
+    left: 28px;
+    top: 40px;
+
+}
+
+.slide2{
+    position: absolute;
+    left: 414px;
+    top: 40px;
+}
+
+.slide3{
+    position: absolute;
+    left: 800px;
+    top: 40px;
+}
+#body {
+    background-color: rgb(55, 55, 56);
+}
+
+#h1 {
+    color: rgb(141, 16, 16);
+    margin-left: 80px;
+}
+
+#img {
+    margin-left: 80px;
+    border-radius: 5%;
+}
+
+#h2 {
+    color: white;
+    margin-left: 100px;
+}
+#recipeDesc {
+    font-style: italic;
+    color: rgb(8, 8, 8);
+    margin-left: 110px;
+}

@@ -1,6 +1,3 @@
-$(function(){
-    $("#nav-placeholder").load("html/nav.html");
-  });
 // var content = document.getElementById("content");
 // load_home();
 // $('#home-btn').click(function(){

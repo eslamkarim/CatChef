@@ -1,8 +1,9 @@
-var recipeName = sessionStorage.getItem('recipe-name');
+// var recipeName = sessionStorage.getItem('recipe-name');
+var recipeName = getParameterByName('name');
 var recipeData = SearchByRecipeName(recipeName);
-console.log("TESTTTTTTT")
+console.log(recipeName)
 if (recipeData == undefined || recipeData == ""){
-    window.location.href = "../NotFound.html"
+    window.location.href = "../html/NotFound.html"
 } else {
     document.getElementById("recipeName").textContent = recipeData.name;
 
