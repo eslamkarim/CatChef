@@ -24,8 +24,8 @@ function SearchAllRecipes(recipeName) {
 }
 
 console.log(SearchByRecipeName("Cinnamon Cranraisin Bread"));
-function updateResult(query) {
-    let resultList = document.getElementById("card-container");
+function updateResult(query, container) {
+    let resultList = container;
     resultList.innerHTML = "";
     var count = 0;
     resultList.innerHTML += `<div class="row">`

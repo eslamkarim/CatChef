@@ -28,8 +28,7 @@
             </div>
             <!--end of col-->
             <div class="col">
-              <input class="form-control form-control-lg form-control-borderless" oninput="updateResult(this.value)"
-                type="search" placeholder="Search topics or keywords">
+              <input id="search-page-input" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
             </div>
             <!--end of col-->
           </div>
@@ -56,6 +55,14 @@
   <script src="../scripts/SearchByIngredient.js"></script>
   <script src="../scripts/GetQueryString.js"></script>
   <script src="../scripts/loadRecipies.js"></script>
+
+  <script>
+    var container = document.getElementById("card-container");
+    var searchInput = document.querySelector('#search-page-input');
+    searchInput.addEventListener('input', e=>{
+      updateResult(e.target.value, container)
+    })
+  </script>
 </body>
 
 </html>
