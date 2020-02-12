@@ -1,8 +1,27 @@
+
+
 var recipeData = new Array();
 var recipesPlaceholder = document.getElementById("recipes-placeholder");
 recipeData = JSON.parse(localStorage.recipes);
+
+
+
+// var paginationContainer = document.querySelector('#pagination-container');
+// var ul = paginationContainer.getElementsByTagName('ul')[0];
+// var li = ul.getElementsByTagName('li');
+
+
+// for (let i = 0; i < numOfPages; i++) {
+//     li[i].addEventListener('click', e => {
+//         console.log(e)
+
+//     });
+
+// }
+
+
 function load_recipes() {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
         recipesPlaceholder.innerHTML +=
             `<div class="col-md-2 list-item">
         <div class="card mb-2 h-30 w-30">
@@ -38,3 +57,7 @@ $('#pagination-container').pagination({
         items.hide().slice(showFrom, showTo).show();
     }
 });
+
+
+
+

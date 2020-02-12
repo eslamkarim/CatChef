@@ -3,7 +3,7 @@ var recipeName = getParameterByName('name');
 var recipeData = SearchByRecipeName(recipeName);
 console.log(recipeName)
 if (recipeData == undefined || recipeData == ""){
-    window.location.href = "../html/NotFound.html"
+    window.location.href = "../html/not_found_page.html.html"
 } else {
     document.getElementById("recipeName").textContent = recipeData.name;
 
