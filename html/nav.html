@@ -1,10 +1,10 @@
-<nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-sm row">
+<nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-sm row align-items-center">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand mx-auto col-8" href="../index.html">
+  <a class="navbar-brand  mx-sm-auto mx-md-n1 mx-lg-4" href="../index.html">
     <img src="../imgs/CatChef.png" width="60" height="60" alt="logo">
     CatChef
   </a>
@@ -21,14 +21,18 @@
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
-    </ul>
-    <form class="form-inline">
 
-      <!-- <select  class="form-control mr-2" style="width: 200px;" type="search"
-        placeholder="Search" aria-label="Search"> -->
-      <select id="search-input-nav" class="selectpicker mr-2"></select>
-      <!-- <button class="btn btn-outline-success my-2" type="submit">Search</button> -->
-    </form>
+      <li class="nav-item">
+        <form class="form-inline">
+
+          <!-- <select  class="form-control mr-2" style="width: 200px;" type="search"
+            placeholder="Search" aria-label="Search"> -->
+          <select id="search-input-nav" class="selectpicker mr-2 nav-link"></select>
+          <!-- <button class="btn btn-outline-success my-2" type="submit">Search</button> -->
+        </form>
+      </li>
+    </ul>
+
   </div>
 </nav>
 <script>
@@ -38,15 +42,19 @@
   $('#search-input-nav').select2({
     placeholder: 'Search',
     width: '100%',
-    // theme: "bootstrap",
+    dropdownAutoWidth: true,
+    // maximumResultsForSearch: 10,
+    theme: "bootstrap",
     data: JSON.parse(localStorage.getItem('searchArr'))
   });
+
+  $('#search-input-nav').css({ "border-left": "2px solid #FF6600!important" })
 
   $("#search-input-nav").on("select2:select", function (e) {
     let selected = $('#search-input-nav').select2('data')
     selectedRecipeName = selected[0].text;
     console.log(selectedRecipeName);
-    
+
     // navSearch(e.target,"oa")
 
     window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
