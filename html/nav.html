@@ -37,17 +37,19 @@
   var searchArr = new Array();
   $('#search-input-nav').select2({
     placeholder: 'Search',
+    width: '100%',
+    // theme: "bootstrap",
     data: JSON.parse(localStorage.getItem('searchArr'))
   });
 
-  $("#search-input-nav").on("select2:selecting", function (e) {
+  $("#search-input-nav").on("select2:select", function (e) {
     let selected = $('#search-input-nav').select2('data')
     selectedRecipeName = selected[0].text;
     console.log(selectedRecipeName);
     
     // navSearch(e.target,"oa")
 
-    // window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
+    window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
   });
 
 </script>
