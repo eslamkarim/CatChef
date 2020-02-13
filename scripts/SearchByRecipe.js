@@ -23,8 +23,8 @@ function SearchAllRecipes(recipeName) {
     return RecipesArray;
 }
 
-function navSearch(target, recipeName){
-    
+function navSearch(target, recipeName) {
+
     let resultList = target;
     resultList.innerHTML = "";
     var count = 0;
@@ -40,7 +40,6 @@ function navSearch(target, recipeName){
     );
 }
 
-console.log(SearchByRecipeName("Cinnamon Cranraisin Bread"));
 function updateResult(query, container) {
     let resultList = container;
     resultList.innerHTML = "";
