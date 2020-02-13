@@ -35,7 +35,8 @@ document.getElementById("sign_up_btn").addEventListener("click", function(event)
 
 function can_sumbit(){
     if(password == confirm_password && first_name != "" && last_name != "" && email != "" && password != ""){
-        return true;
+        if (email_exists(email))
+            return true;
     } else {
         alert("Missing data for sign up..")
         return false;
@@ -50,6 +51,10 @@ function clear_confirmation_password_feild(){
     document.getElementById("confirm_password").value = "";
 }
 
+function clear_email_feild(){
+    document.getElementById("email").value = "";
+}
+
 function clear_feilds_after_sign_up(){
     document.getElementById("first_name").value = "";
     document.getElementById("last_name").value = "";
@@ -57,4 +62,20 @@ function clear_feilds_after_sign_up(){
     document.getElementById("password").value = "";
     document.getElementById("confirm_password").value = "";
     document.getElementById("gender").value = "";
+}
+
+function email_exists(email){
+    storage_legnth = window.localStorage.length;
+    local_storage_keys = Object.keys(localStorage);
+    users = [];
+
+    for(i=0; i < local_storage_keys.length; i++){
+        users[i] = JSON.parse(window.localStorage.getItem(local_storage_keys[i]));
+        if (email == users[i].email){
+            alert("The email you entered exists.");
+            clear_email_feild();
+            return false;
+        }
+    }
+    return true;
 }
