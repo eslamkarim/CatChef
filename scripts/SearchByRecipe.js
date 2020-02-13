@@ -23,6 +23,23 @@ function SearchAllRecipes(recipeName) {
     return RecipesArray;
 }
 
+function navSearch(target, recipeName){
+    
+    let resultList = target;
+    resultList.innerHTML = "";
+    var count = 0;
+    resultList.innerHTML += `<div class="row">`
+    SearchAllRecipes(recipeName).forEach(element => {
+        count++;
+        if (count < 20) {
+            resultList.innerHTML += `
+            <option value="${element.name}">${element.name}</option>`;
+        }
+    },
+        count = 0
+    );
+}
+
 console.log(SearchByRecipeName("Cinnamon Cranraisin Bread"));
 function updateResult(query, container) {
     let resultList = container;

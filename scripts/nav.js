@@ -1,20 +1,23 @@
-$(function () {
+import '../libs/select2/select2.min.js';                       // globally assign select2 
+function loadNav() {
     $("#nav-placeholder").load("../html/nav.html");
-});
+}
 
-document.addEventListener("DOMContentLoaded", function(){
-    console.log("SEARCH-NAV: ")
-    console.log(document.querySelector('#search-input-nav'))
-}, true);
+function includes() {
+    $('head').append('<link rel="stylesheet" type="text/css" href="../libs/select2/select2.min.css">');
+}
 
-// var container = document.getElementById("card-container");
+function loadSearch() {
+    $('#search-input-nav').select2({
+        placeholder: 'Select an option'
+    });
+}
 
-$('#search-input-nav').ready(function(){
-    console.log("SEARCH-NAV: ")
-    console.log(document.querySelector('#search-input-nav'))
-})
+var dfd = $.Deferred();
 
-// searchInput.addEventListener('input', e => {
-//     console.log(e.target.value);
-//     // updateResult(e.target.value, container)
-// })
+dfd.done(includes, loadNav).done(loadSearch);
+
+dfd.resolve();
+
+
+

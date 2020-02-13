@@ -1,4 +1,4 @@
-class Recipe {
+export default class SearchObject {
     name;
     ingredients = new Array();
     image;
@@ -6,9 +6,10 @@ class Recipe {
     instructions = new Array();
     rating;
 
-    constructor(name, ingredients = null, instructions = null, description = null, image = null, rating = null) {
-        if (arguments.length == 1) {
-            this.name = name;
+    constructor(id, name, ingredients = null, instructions = null, description = null, image = null, rating = null) {
+        if (arguments.length == 2) {
+            this.id = id;
+            this.text = name;
         }
         else {
             this.name = name;
