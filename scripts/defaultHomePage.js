@@ -6,9 +6,20 @@ var recipeImg1 = document.getElementById('recipeImg1');
 var slideShow = document.getElementsByClassName('card-img-top');
 var recipeTitle = document.getElementsByClassName('card-title');
 var recipeText = document.getElementsByClassName('card-text');
-var detailsButtons = document.getElementsByClassName('btn btn-primary')
+var detailsButtons = document.getElementsByClassName('btn btn-primary');
+var cardimages = document.getElementsByClassName("card-img-top");
+var cardTitles =  document.getElementsByClassName("card-title");
+var cardText =  document.getElementsByClassName("card-text");
 var i = 1, x;
 var slide = 1;
+//initial slider random recipes
+for (let i = 0; i < 6; i++) {
+        var rand = Math.round(Math.random() * recipesArray.length);
+        cardimages[i].setAttribute("src", recipesArray[rand].image);
+        cardTitles[i].textContent = recipesArray[rand].name;
+        cardText[i].textContent= recipesArray[rand].description;
+        detailsButtons[i].setAttribute("href","../html/specific_recipe.html?name="+recipesArray[rand].name);
+}
 // function displayRecipe() {
 
 //         var randomRecipes = Math.round(Math.random() * recipesArray.length);
