@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="../imgs/CatChef.png">
+
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
+  <link rel="stylesheet" href="../libs/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../libs/fontawesome-free-5.12.1-web/css/all.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <title>CatChef</title>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="container">
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div>
+          <div>
+            <div class="col-auto">
+              <i class="fas fa-search h4 text-body"></i>
+            </div>
+            <!--end of col-->
+            <div class="col">
+              <input id="search-page-input" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+            </div>
+            <!--end of col-->
+          </div>
+
+
+        </div>
+      </div>
+      <!--end of col-->
+    </div>
+  </div>
+
+  <div class="card-deck col-10 mx-auto">
+    <div id="card-container" class="row">
+    </div>
+  </div>
+
+  <script src="../libs/js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="../libs/js/popperjs/umd/popper.min.js"></script>
+  <script src="../libs/js/bootstrap/bootstrap.min.js"></script>
+
+  <script src="../scripts/nav.js"></script>
+  <script src="../scripts/recipe.js"></script>
+  <script src="../scripts/SearchByRecipe.js"></script>
+  <script src="../scripts/SearchByIngredient.js"></script>
+  <script src="../scripts/GetQueryString.js"></script>
+  <script src="../scripts/loadRecipies.js"></script>
+
+  <script>
+    var container = document.getElementById("card-container");
+    var searchInput = document.querySelector('#search-page-input');
+    searchInput.addEventListener('input', e=>{
+      updateResult(e.target.value, container)
+    })
+  </script>
+</body>
+
+</html>

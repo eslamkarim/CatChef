@@ -1,0 +1,25 @@
+body {
+	background-color: white;
+	overflow-x: hidden;
+}
+
+h1 {
+	color: rgb(141, 16, 16);
+	margin-left: 80px;
+}
+
+img {
+	margin-left: 80px;
+	border-radius: 5%;
+}
+
+h2 {
+	color: white;
+	margin-left: 100px;
+}
+
+h4 {
+	font-style: italic;
+	color: rgb(8, 8, 8);
+	margin-left: 110px;
+}

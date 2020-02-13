@@ -14,47 +14,192 @@
 </head>
 
 <body>
-  <nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-sm row">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div id="nav-placeholder"></div>
 
-    <a class="navbar-brand mx-auto col-8" href="#">
-      <img src="imgs/CatChef.png" width="60" height="60" alt="logo">
-      CatChef
-    </a>
-
-    <div class="collapse navbar-collapse col-4" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Recipes</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-
-        <li>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </li>
-
-      </ul>
+  <div class="ml-5 mr-5 w-40 h-5">
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+  
+  
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+  
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+  
+        <!--First slide-->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Recipe Name</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam,.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Recipe Name</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam,.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Recipe Name</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam,.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <!--/.First slide-->
+  
+        <!--Second slide-->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Recipe Name</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam,.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Recipe Name</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam,.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Recipe Name</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam,.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <!--/.Second slide-->
+     
+      </div>
+      <!--/.Slides-->
+  
+          <!--Controls-->
+          <div class="controls-top row justify-content-center">
+            <a class="btn-floating" href="#multi-item-example" data-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </a>
+            &nbsp; &nbsp;
+            <a class="btn-floating" href="#multi-item-example" data-slide="next">
+              <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <!--/.Controls-->
+  
     </div>
-  </nav>
+    <!--/.Carousel Wrapper-->
+  
+  </div>
+  <!-- 
+  <div class="row">
+    <div class="card mb-5 col-7 mx-auto">
+      <div class="row" id ="recipeDay">
+        <div class="col-md-6 align-self-center">
+          <img src="imgs/recipe1.jpg" class="card-img" alt="cookies" id="recipeImg1">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title" id="recipeTitle1">Card title</h5>
+            <p class="card-text" id="recipeText1">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
-  <div id="content"></div>
+
+
+
+
+
+  <!-- Recipes Slides  -->
+
+
+  <!-- <div class="card mb-4">
+      <img src="imgs/recipe1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Recipe Name</h5>
+        <p class="card-text"> Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam,.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div> -->
 
   <script src="libs/js/jquery/jquery-3.4.1.min.js"></script>
   <script src="libs/js/popperjs/umd/popper.min.js"></script>
   <script src="libs/js/bootstrap/bootstrap.min.js"></script>
-  <script src="scripts/script.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/nav.js" type="module"></script>
+
+  <script src="scripts/recipe.js"></script>
+  <script src="scripts/SearchByRecipe.js"></script>
+  <script src="scripts/GetQueryString.js"></script>
+  <script src="scripts/loadRecipies.js" type="module"></script>
+  <script src="scripts/defaultHomePage.js"></script>
+
+
+
 
 </body>
 

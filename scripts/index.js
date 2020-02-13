@@ -1,9 +1,16 @@
-var content = document.getElementById("content");
-$('#content').load('../html/landing-page.html #container');
-
+// var content = document.getElementById("content");
+// load_home();
+// $('#home-btn').click(function(){
+//     load_home();
+// })
+$('#recipes-btn').click(function(){
+    
+})
 // function load_home() {
-//     content.innerHTML = '<object type="text/html" data="../html/landing-page.html"></object>';
+//     $('#content').load('../html/landing-page.html #container');
 // }
+// function load_recipes() {
+//     $('#content').load('../recipes.html')}
 // content.addEventListener("load", load_home)
 // content.style.width = window.innerWidth;
 // var html;
