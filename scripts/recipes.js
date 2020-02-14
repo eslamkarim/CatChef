@@ -23,8 +23,8 @@ recipeData = JSON.parse(localStorage.recipes);
 function load_recipes() {
     for (let i = 0; i < 200; i++) {
         recipesPlaceholder.innerHTML +=
-            `<div class="col-3 list-item h-25">
-        <div class="card m-4 w-30 h-30">
+            `<div class="col col-sm-6 col-md-4 col-lg-3 list-item h-25 my-3 mx-auto">
+        <div class="card w-30 h-30 shadow">
             <img class="card-img-top" src=${recipeData[i].image} alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"><a href="../html/specific_recipe.html?name=${recipeData[i].name}">${recipeData[i].name}</a></h4>
