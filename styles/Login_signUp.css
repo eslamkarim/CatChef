@@ -403,7 +403,7 @@ input {
 }
 
 .card-2 .card-heading {
-  background: url("../images/food.jpg") top left/cover no-repeat;
+  background: url("../imgs/food.jpg") top left/cover no-repeat;
   width: 29.1%;
   display: table-cell;
 }
