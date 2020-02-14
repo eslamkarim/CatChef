@@ -402,8 +402,13 @@ input {
   display: table;
 }
 
-.card-2 .card-heading {
-  background: url("../imgs/food.jpg") top left/cover no-repeat;
+.card-2 .sign-in {
+  background: url("../imgs/signinCover.png") top left/cover no-repeat;
+  width: 29.1%;
+  display: table-cell;
+}
+.card-2 .sign-up {
+  background: url("../imgs/signupCover.png") top left/cover no-repeat;
   width: 29.1%;
   display: table-cell;
 }
