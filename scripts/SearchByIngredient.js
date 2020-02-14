@@ -1,5 +1,8 @@
 var recipe = localStorage.getItem("recipes");
-
+var AddButton = document.getElementById("addButton");
+var SearchInput = document.getElementById("searchInput");
+var IngredintsHtml = document.getElementById("ingredintsAdded");
+var UserIngredientArray=[]
 //function to seaarch for an array of words from user in the ingredients array in our dataset and return its count (counting dublicates too ex: if there are 2 sugar words in the array it will print 2)
 function SearchByIngredient(ingredintsArray) {
     var RecipesArray=[];
@@ -43,3 +46,10 @@ function compare(a, b) {
     }
     return comparison * -1; //to flip ordering of the array
   }
+
+AddButton.addEventListener('click',function () {
+    UserIngredientArray.push(SearchInput.value);
+    IngredintsHtml.innerHTML+=SearchInput.value;
+    IngredintsHtml.innerHTML+=" "
+    SearchInput.value=""
+  })
