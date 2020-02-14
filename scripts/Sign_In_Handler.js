@@ -10,10 +10,12 @@ document.getElementById("sign_in").addEventListener("click", function(event){
         alert("Null required fields..");
     } else {
        sign_in_result = sign_in(email, password);
-        if (sign_in_result)
-            console.log("Signed in");
+        if (sign_in_result){
+            alert("signed in")
+        }   
         else{
-            console.log("Wrong username or password.");
+            clear_sign_in_feilds();
+            alert("Wrong username or password.");
         }
     }
 })
@@ -21,13 +23,13 @@ document.getElementById("sign_in").addEventListener("click", function(event){
 function sign_in(email, password){
     storage_legnth = window.localStorage.length;
     local_storage_keys = Object.keys(localStorage);
-    users = [];
+    user_data = [];
 
     for(i=0; i < local_storage_keys.length; i++){
-        users[i] = JSON.parse(window.localStorage.getItem(local_storage_keys[i]));
-        if (email == users[i].email && password == users[i].password){
-            // add the object to the web session.
-            console.log(users[i]);
+        user_key = local_storage_keys[i];
+        user_data[i] = JSON.parse(window.localStorage.getItem(user_key));
+        if (email == user_data[i].email && password == user_data[i].password){
+            sessionStorage.setItem(user_key, JSON.stringify(user_data));
             return true;
         }
     }
