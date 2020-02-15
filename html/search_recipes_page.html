@@ -28,22 +28,22 @@
             </div>
             <!--end of col-->
             <div class="col">
-              <input class="form-control form-control-lg form-control-borderless" oninput="updateResult(this.value)"
-                type="search" placeholder="Search topics or keywords">
+              <input id="search-page-input" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
             </div>
             <!--end of col-->
           </div>
 
-          <div class="card-deck">
-            <div id="card-container" class="row">
-            </div>
-          </div>
+
         </div>
       </div>
       <!--end of col-->
     </div>
   </div>
 
+  <div class="card-deck col-10 mx-auto">
+    <div id="card-container" class="row">
+    </div>
+  </div>
 
   <script src="../libs/js/jquery/jquery-3.4.1.min.js"></script>
   <script src="../libs/js/popperjs/umd/popper.min.js"></script>
@@ -55,6 +55,14 @@
   <script src="../scripts/SearchByIngredient.js"></script>
   <script src="../scripts/GetQueryString.js"></script>
   <script src="../scripts/loadRecipies.js"></script>
+
+  <script>
+    var container = document.getElementById("card-container");
+    var searchInput = document.querySelector('#search-page-input');
+    searchInput.addEventListener('input', e=>{
+      updateResult(e.target.value, container)
+    })
+  </script>
 </body>
 
 </html>

@@ -1,35 +1,125 @@
-<nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-sm row">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-sm row align-items-center">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <a class="navbar-brand mx-auto col-8" href="../index.html">
-      <img src="../imgs/CatChef.png" width="60" height="60" alt="logo">
-      CatChef
-    </a>
+  <a class="navbar-brand  mx-sm-auto mx-md-n1 mx-lg-4" href="../index.html">
+    <img src="../imgs/CatChef.png" width="60" height="60" alt="logo">
+    CatChef
+  </a>
 
-    <div class="collapse navbar-collapse col-4" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="../index.html" id="home-btn">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../html/recipes_page.html" id="recipes-btn">Recipes</a>
-        </li>
+  <div class="collapse navbar-collapse col-4" id="navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html" id="home-btn">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../html/recipes_page.html" id="recipes-btn">Recipes</a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
 
-        <li>
-          <form class="form-inline">
-            <input class="form-control mr-2" style="width: 200px;" type="search" placeholder="Search"
-              aria-label="Search">
-            <button class="btn btn-outline-success my-2" type="submit">Search</button>
-          </form>
-        </li>
+      <li class="nav-item">
+        <form class="form-inline">
 
-      </ul>
-    </div>
-  </nav>
+          <!-- <select  class="form-control mr-2" style="width: 200px;" type="search"
+            placeholder="Search" aria-label="Search"> -->
+             <select id="search-input-nav" class="selectpicker mr-2 nav-link"></select>
+          <!-- <button class="btn btn-outline-success my-2" type="submit">Search</button> -->
+        </form> 
+      </li>
+
+      <li class="nav-item">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Search By
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item"  id="search-by-recipes" type="button">Recipes</button>
+          <button class="dropdown-item"  id="search-by-ingradients" type="button">Ingredients</button>
+          
+        </div>
+      </div>
+    </li>
+
+      <li class="nav-item">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="login-page" type="submit">Login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="sign-up-page" type="submit">Sign Up</button>
+      </li>
+
+      <!-- <li class="nav-item">
+        <h5>Search By</h5>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-recipes" type="submit">Recipes</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-ingradients" type="submit">Ingradients</button>
+      </li> -->
+      
+    </ul>
+
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" id="search-input-nav" type="search" placeholder="Search By" aria-label="Search">
+       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>  -->
+
+  </div>
+</nav>
+
+
+<script>
+
+  var searchInput = document.querySelector('#search-input-nav');
+  var searchArr = new Array();
+  $('#search-input-nav').select2({
+    placeholder: 'Search',
+    width: '100%',
+    dropdownAutoWidth: true,
+    // maximumResultsForSearch: 10,
+    theme: "bootstrap",
+    data: JSON.parse(localStorage.getItem('searchArr'))
+  });
+
+  $('#search-input-nav').css({ "border-left": "2px solid #FF6600!important" })
+
+  $("#search-input-nav").on("select2:select", function (e) {
+    let selected = $('#search-input-nav').select2('data')
+    selectedRecipeName = selected[0].text;
+    console.log(selectedRecipeName);
+
+    // navSearch(e.target,"oa")
+
+    window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
+  });
+  
+  // login && sign up
+
+  var loginBtn = document.getElementById('login-page');
+  var signUpBtn = document.getElementById('sign-up-page');
+
+  loginBtn.addEventListener('click' , function(){
+    console.log("go to /login_page");
+    // window.location.href = '../html/login_page.html';
+  });
+
+  signUpBtn.addEventListener('click' , function(){
+    console.log("go to /sign_up_page");
+    // window.location.href = '../html/sign_up_page.html';
+  });
+
+// search by recipes && ingredients
+
+  var recipesBtn = document.getElementById('search-by-recipes');
+  var ingradientsBtn = document.getElementById('search-by-ingradients');
+
+  recipesBtn.addEventListener('click' , function(){
+   
+    window.location.href = '../html/search_recipes_page.html';
+  });
+
+  ingradientsBtn.addEventListener('click' , function(){
+    console.log("go to /search_ingradients_page");
+    // window.location.href = '../html/search_ingradients_page.html';
+  });
+
+</script>

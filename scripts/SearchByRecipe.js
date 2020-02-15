@@ -23,9 +23,25 @@ function SearchAllRecipes(recipeName) {
     return RecipesArray;
 }
 
-console.log(SearchByRecipeName("Cinnamon Cranraisin Bread"));
-function updateResult(query) {
-    let resultList = document.getElementById("card-container");
+function navSearch(target, recipeName) {
+
+    let resultList = target;
+    resultList.innerHTML = "";
+    var count = 0;
+    resultList.innerHTML += `<div class="row">`
+    SearchAllRecipes(recipeName).forEach(element => {
+        count++;
+        if (count < 20) {
+            resultList.innerHTML += `
+            <option value="${element.name}">${element.name}</option>`;
+        }
+    },
+        count = 0
+    );
+}
+
+function updateResult(query, container) {
+    let resultList = container;
     resultList.innerHTML = "";
     var count = 0;
     resultList.innerHTML += `<div class="row">`
@@ -39,7 +55,7 @@ function updateResult(query) {
                             <div class="card-body">
                               <h4 class="card-title">${element.name}</h4>
                               <p class="card-text">${element.description}</p>
-                              <a class="btn btn-primary">Button</a>
+                              <a class="btn btn-primary" href="../html/specific_recipe.html?name=${element.name}">Details</a>
                             </div>
                         </div>
                     </div>`;
