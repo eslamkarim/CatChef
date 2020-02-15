@@ -47,18 +47,35 @@ function updateResult(query, container) {
     resultList.innerHTML += `<div class="row">`
     SearchAllRecipes(query).forEach(element => {
         count++;
-        if (count < 20) {
-            resultList.innerHTML += `
-                    <div class="col-md-3">
-                        <div class="card mb-2 h-30 w-30">
-                            <img class="card-img-top" src="${element.image}" alt="Card image cap">
-                            <div class="card-body">
-                              <h4 class="card-title">${element.name}</h4>
-                              <p class="card-text">${element.description}</p>
-                              <a class="btn btn-primary" href="../html/specific_recipe.html?name=${element.name}">Details</a>
-                            </div>
+        if (count < 19) {
+            resultList.innerHTML += `<div class=" col-sm-6 col-md-4 col-lg-3 col-xl-2 list-item h-25 my-3 mx-auto">
+            <div class="card w-30 h-30 shadow">
+                <img class="card-img-top" src=${element.image} alt="Card image cap">
+                <div class="card-body">
+                    <span class="score">
+                        <div class="score-wrap">
+                            <span class="stars-active" style="width:${element.rating * 20}%">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </span>
+                            <span class="stars-inactive">
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </span>
                         </div>
-                    </div>`;
+                    </span>
+                    <h5 class="card-title"><a
+                            href="../html/specific_recipe.html?name=${element.name}">${element.name}</a></h6>
+                        <p class="card-text overflow-hidden">${element.description}</p>
+                </div>
+            </div>
+        </div>`
         }
     },
         resultList.innerHTML += `</div>`,
