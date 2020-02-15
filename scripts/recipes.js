@@ -43,7 +43,7 @@ load_recipes();
 var items = $(".list-wrapper .list-item");
 var numItems = items.length;
 var perPage = 18;
-
+var currPage = 1
 items.slice(perPage).hide();
 
 $('#pagination-container').pagination({

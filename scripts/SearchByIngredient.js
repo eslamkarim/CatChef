@@ -23,7 +23,8 @@ function SearchByIngredient(ingredintsArray) {
     //return the first 20 recipes that match
     var finalResultArray = [];
     for (let i = 0; i < 20; i++) {
-        finalResultArray.push(SearchByRecipeName(sortedArray[i].title));   
+        if(sortedArray[i].matched != 0)
+            finalResultArray.push(SearchByRecipeName(sortedArray[i].title));   
     }
     return finalResultArray;
 }
@@ -49,19 +50,28 @@ function compare(a, b) {
   }
 //event listener for ingredient add button
 AddButton.addEventListener('click',function () {
-    UserIngredientArray.push(SearchInput.value);
-    IngredintsHtml.innerHTML+=SearchInput.value;
-    IngredintsHtml.innerHTML+=" ";
-    SearchInput.value="";
+    if(/^[a-zA-Z]+$/.test(SearchInput.value)){
+        UserIngredientArray.push(SearchInput.value);
+        IngredintsHtml.innerHTML+=SearchInput.value;
+        IngredintsHtml.innerHTML+=" ";
+        SearchInput.value="";
+    }else{
+        SearchInput.value="";
+    }
   })
 //event listener for search button
 searchButton.addEventListener('click',function () {
-    if(SearchInput.value != ""){
+    if(SearchInput.value != "" && /^[a-zA-Z]+$/.test(SearchInput.value)){
         UserIngredientArray.push(SearchInput.value);
         IngredintsHtml.innerHTML+=SearchInput.value;
         IngredintsHtml.innerHTML+=" ";
         SearchInput.value="";
     }
+    else{
+        SearchInput.value="";
+    }
     var result=SearchByIngredient(UserIngredientArray);
-    
+    console.log(result);
+    UserIngredientArray=[];
+    IngredintsHtml.innerHTML=" ";
 });
