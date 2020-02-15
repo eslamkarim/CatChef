@@ -3,7 +3,7 @@
 var recipeData = new Array();
 var recipesPlaceholder = document.getElementById("recipes-placeholder");
 recipeData = JSON.parse(localStorage.recipes);
-var babyArray=[]
+var babyArray=[] //small array to hold 18 elements only with no correlation to pagination
 
 
 // var paginationContainer = document.querySelector('#pagination-container');
@@ -18,6 +18,7 @@ var babyArray=[]
 //     });
 
 // }
+//slice the big array and put it into the baby array of reipes then draw the new array into the page, then scroll to the top
 function paginate(pageNumber) {
     var showFrom = perPage * (pageNumber - 1);
     var showTo = showFrom + perPage;
@@ -25,7 +26,7 @@ function paginate(pageNumber) {
     load_recipes();
     $(window).scrollTop(0);
 }
-
+//Draw the html elements of the recipes
 function load_recipes() {
     recipesPlaceholder.innerHTML =""
     for (let i = 0; i < babyArray.length; i++) {
@@ -66,7 +67,7 @@ var items = recipeData;
 var numItems = recipeData.length;
 var perPage = 18;
 paginate(1);
-
+//pagination part
 $('#pagination-container').pagination({
     items: numItems,
     itemsOnPage: perPage,
