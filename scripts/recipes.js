@@ -3,7 +3,7 @@
 var recipeData = new Array();
 var recipesPlaceholder = document.getElementById("recipes-placeholder");
 recipeData = JSON.parse(localStorage.recipes);
-
+var babyArray=[] //small array to hold 18 elements only with no correlation to pagination
 
 
 // var paginationContainer = document.querySelector('#pagination-container');
@@ -18,20 +18,26 @@ recipeData = JSON.parse(localStorage.recipes);
 //     });
 
 // }
-
-
+//slice the big array and put it into the baby array of reipes then draw the new array into the page, then scroll to the top
+function paginate(pageNumber) {
+    var showFrom = perPage * (pageNumber - 1);
+    var showTo = showFrom + perPage;
+    babyArray=items.slice(showFrom, showTo);
+    load_recipes();
+    $(window).scrollTop(0);
+}
+//Draw the html elements of the recipes
 function load_recipes() {
-    for (let i = 0; i < 200; i++) {
+    recipesPlaceholder.innerHTML =""
+    for (let i = 0; i < babyArray.length; i++) {
         recipesPlaceholder.innerHTML +=
         `<div class=" col-sm-6 col-md-4 col-lg-3 col-xl-2 list-item h-25 my-3 mx-auto">
             <div class="card w-30 h-30 shadow">
-                <div class="card-img-container">
-                    <img class="card-img-top" src=${recipeData[i].image} alt="Card image cap">
-                </div>
+                <img class="card-img-top" src=${babyArray[i].image} alt="Card image cap">
                 <div class="card-body">
                     <span class="score">
                         <div class="score-wrap">
-                            <span class="stars-active" style="width:${recipeData[i].rating * 20}%">
+                            <span class="stars-active" style="width:${babyArray[i].rating * 20}%">
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -48,31 +54,27 @@ function load_recipes() {
                         </div>
                     </span>
                     <h5 class="card-title"><a
-                            href="../html/specific_recipe.html?name=${recipeData[i].name}">${recipeData[i].name}</a></h6>
-                        <p class="card-text overflow-hidden">${recipeData[i].description}</p>
+                            href="../html/specific_recipe.html?name=${babyArray[i].name}">${babyArray[i].name}</a></h6>
+                        <p class="card-text overflow-hidden">${babyArray[i].description}</p>
                 </div>
             </div>
         </div>`
     }
 
 }
-load_recipes();
 
-var items = $(".list-wrapper .list-item");
-var numItems = items.length;
+var items = recipeData;
+var numItems = recipeData.length;
 var perPage = 18;
-
-items.slice(perPage).hide();
-
+paginate(1);
+//pagination part
 $('#pagination-container').pagination({
     items: numItems,
     itemsOnPage: perPage,
     prevText: "&laquo;",
     nextText: "&raquo;",
-    onPageClick: function (pageNumber) {
-        var showFrom = perPage * (pageNumber - 1);
-        var showTo = showFrom + perPage;
-        items.hide().slice(showFrom, showTo).show();
+    onPageClick: function(p){
+        paginate(p);
     }
 });
 
