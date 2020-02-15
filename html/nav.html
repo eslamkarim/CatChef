@@ -90,8 +90,6 @@
   $("#search-input-nav").on("select2:select", function (e) {
     let selected = $('#search-input-nav').select2('data')
     selectedRecipeName = selected[0].text;
-    console.log(selectedRecipeName);
-
     // navSearch(e.target,"oa")
 
     window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
@@ -104,7 +102,6 @@
   var recipesBtn = document.getElementById('search-by-recipes');
   var ingradientsBtn = document.getElementById('search-by-ingradients');
   var signed_in_drop_down = document.getElementById("signed_in_drop_down");
-  console.log(signed_in_drop_down);
   
   var unsigned_btns = document.getElementById("sign_in/up_btns");
 
@@ -120,7 +117,6 @@
 
   // Handling the nav bar btns;
   session_storage_data = Object.keys(sessionStorage).length;
-  console.log(session_storage_data);
   
   if (session_storage_data > 1){
     signed_in_drop_down.innerHTML = `
@@ -162,10 +158,9 @@
       }
 
 
-      document.getElementById("sign_out").addEventListener('click', sign_out);
+      document.getElementById("sign-up-page").addEventListener('click', sign_out);
 
 function sign_out(){
-  console.log("logging out");
   user_key = Object.keys(sessionStorage)[1];
   sessionStorage.removeItem(user_key);
   window.location.href = "../index.html";
