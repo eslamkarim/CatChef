@@ -9,7 +9,8 @@ if (recipeData == undefined || recipeData == ""){
 
     document.getElementById("recipeImage").src = recipeData.image;
 
-    document.getElementById("recipeDesc").textContent = "- " + recipeData.description;
+    document.getElementById("recipeDesc").innerHTML =`<span class="recipe-directions__list--item">${recipeData.description}
+    </span>`;
 
     recipeData.ingredients.forEach(ingredient => {
         document.getElementById("ingredients").innerHTML +=`<li class="step">
@@ -24,7 +25,7 @@ if (recipeData == undefined || recipeData == ""){
         </span>
         </li>`
     });
-    document.getElementById("prep").innerHTML=`<li class="prepTime__item"><span class="far fa-clock"></span></li>
+    document.getElementById("prep").innerHTML=`<li class="prepTime__item"><i class="fal fa-stopwatch"></i></li>
     <li class="prepTime__item">
         <p class="prepTime__item--type" aria-hidden="true">Prep</p><span aria-hidden="true"><span class="prepTime__item--time">${recipeData.prep_time_minutes}</span> m</span></time>
     </li>
