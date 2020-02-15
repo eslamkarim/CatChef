@@ -1,5 +1,9 @@
 import SearchObject from "../scripts/SearchObject.js";
 
+//test if localStorage is null
+if(localStorage.getItem('recipes') === null)
+{
+
 var recipes = [];
 var searchArr = [];
 var recipeJSON;
@@ -35,6 +39,13 @@ readTextFile("../recipes.json", function (text) {
         
         id++;
     });;
+
     localStorage.setItem('recipes', JSON.stringify(recipes));
     localStorage.setItem('searchArr', JSON.stringify(searchArr));
 });
+}
+
+else
+{
+    console.log('recipes already is loaded');
+}
