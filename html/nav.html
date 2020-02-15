@@ -33,10 +33,15 @@
       </li>
 
       <li class="nav-item">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="login-page" type="submit">Login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="sign-up-page" type="submit">Sign Up</button>
+      </li>
+
+      <!-- <li class="nav-item">
         <h5>Search By</h5>
         <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-recipes" type="submit">Recipes</button>
         <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-ingradients" type="submit">Ingradients</button>
-      </li>
+      </li> -->
       
     </ul>
 
@@ -47,7 +52,10 @@
 
   </div>
 </nav>
+
+
 <script>
+
   var searchInput = document.querySelector('#search-input-nav');
   var searchArr = new Array();
   $('#search-input-nav').select2({
@@ -72,19 +80,32 @@
   });
 
 
+  var loginBtn = document.getElementById('login-page');
+  var signUpBtn = document.getElementById('sign-up-page');
+
+  loginBtn.addEventListener('click' , function(){
+    console.log("go to /login_page");
+    // window.location.href = '../html/login_page.html';
+  });
+
+  signUpBtn.addEventListener('click' , function(){
+    console.log("go to /sign_up_page");
+    // window.location.href = '../html/sign_up_page.html';
+  });
+
   // Shimaa
 
-  var recipesBtn = document.getElementById('search-by-recipes');
-  var ingradientsBtn = document.getElementById('search-by-ingradients');
+  // var recipesBtn = document.getElementById('search-by-recipes');
+  // var ingradientsBtn = document.getElementById('search-by-ingradients');
 
-  recipesBtn.addEventListener('click' , function(){
-    // window.open('../html/search-recipes-page.html');
-    window.location.href = '../html/search_recipes_page.html';
-  });
+  // recipesBtn.addEventListener('click' , function(){
+  //   // window.open('../html/search-recipes-page.html');
+  //   window.location.href = '../html/search_recipes_page.html';
+  // });
 
-  ingradientsBtn.addEventListener('click' , function(){
-    console.log("go to /search_ingradients_page");
-    // window.location.href = '../html/search_ingradients_page.html';
-  });
+  // ingradientsBtn.addEventListener('click' , function(){
+  //   console.log("go to /search_ingradients_page");
+  //   // window.location.href = '../html/search_ingradients_page.html';
+  // });
 
 </script>
