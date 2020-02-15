@@ -17,23 +17,39 @@
 
   <div>
 
-    <h1 class="h1 col-6" id="recipeName"></h1>
+    <h1 class="heading__h2--gutters recipe-ingredients__header" id="recipeName"></h1>
 
     <img class="img-responsive" id="recipeImage" src="" alt="recipe1">
 
-    <h1 class="h1 col-12">Description</h1>
+    <h1 class="heading__h2--gutters recipe-ingredients__header">Description</h1>
     <h4 class="h4 col-10" id="recipeDesc"></h4>
 
-    <h1 class="h1 col-12">Ingredients</h1>
+    <!-- <h1 class="h1 col-12">Ingredients</h1> -->
 
+    <h2 class="heading__h2--gutters recipe-ingredients__header">Ingredients</h2>
     <div class="container" id="ingredients">
     </div>
 
-    <h1 class="h1 col-12">Insructions</h1>
+    <h1 class="heading__h2--gutters recipe-ingredients__header">Insructions</h1>
+    <ul class="prepTime">
+      <li class="prepTime__item"><span class="svg-icon--recipe-page--time_stats_gr svg-icon--recipe-page--time_stats_gr-dims"></span></li>
+      <li class="prepTime__item" aria-label="Prep time: 15 Minutes">
+          <p class="prepTime__item--type" aria-hidden="true">Prep</p><time itemprop="prepTime" datetime="PT15M"><span aria-hidden="true"><span class="prepTime__item--time">15</span> m</span></time>
+      </li>
+                  <li class="prepTime__item" aria-label="Cook time: 35 Minutes">
+              <p class="prepTime__item--type" aria-hidden="true">Cook</p><time itemprop="cookTime" datetime="PT35M"><span aria-hidden="true"><span class="prepTime__item--time">35</span> m</span></time>
+          </li>
+                  <li class="prepTime__item" aria-label="Ready in 50 Minutes">
+              <p class="prepTime__item--type" aria-hidden="true">Ready In</p><time itemprop="totalTime" datetime="PT50M"><span aria-hidden="true"><span class="prepTime__item--time">50</span> m</span></time>
+          </li>
+  </ul>
 
-    <div class="container col-10" id="insructions"></div>
+    <!-- <div class="container col-10" id="insructions"></div>
+  </div> -->
+    <ol class="list-numbers recipe-directions__list" id="insructions">
+
+    </ol>
   </div>
-
 
   <script src="../libs/js/jquery/jquery-3.4.1.min.js"></script>
   <script src="../libs/js/popperjs/umd/popper.min.js"></script>

@@ -16,6 +16,10 @@ if (recipeData == undefined || recipeData == ""){
     });
 
     recipeData.instructions.forEach(instruction => {
-        document.getElementById("insructions").innerHTML += `<h4>- ${instruction}<h4>`
+        // document.getElementById("insructions").innerHTML += `<h4>- ${instruction}<h4>`
+        document.getElementById("insructions").innerHTML += `<li class="step">
+        <span class="recipe-directions__list--item">${instruction}
+        </span>
+        </li>`
     });
 }

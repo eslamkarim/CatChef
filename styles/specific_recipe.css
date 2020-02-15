@@ -1,25 +1,97 @@
-body {
-	background-color: white;
-	overflow-x: hidden;
+.recipe-ingredients .heading__h2, .recipe-ingredients .heading__h2--gutters, .recipe-ingredients .heading__h2--no--gutters {
+    min-height: 58px;
+    padding: 0.8rem 1% 0.7rem;
 }
 
-h1 {
-	color: rgb(141, 16, 16);
-	margin-left: 80px;
+.recipe-ingredients__header {
+    position: relative;
 }
 
-img {
-	margin-left: 80px;
-	border-radius: 5%;
+.heading__h2--gutters {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.heading__h2, .heading__h2--gutters, .heading__h2--no--gutters, .lo-container--slider h2 {
+    font-size: 3.5rem;
+    border-bottom: 1px solid #e6e6e6;
+    clear: both;
+    color: #ec9052;
+    font-weight: 300;
+    margin-top: 1rem;
+    padding: 0.75rem 3% 0.8rem;
+    width: 100%;
+}
+ol, ul{
+	list-style-type: none;
+	counter-reset: item;
 }
 
-h2 {
-	color: white;
-	margin-left: 100px;
+ol.list-numbers li {
+	margin-left: 2rem;
+    margin: 0 0 0.5rem 12.35rem;
+}
+.recipe-directions__list li::before {
+    font-size: 18px;
+    font-size: 1.125rem;
+    border: 1px solid #cfcfcf;
+    color: #cfcfcf;
+    content: counter(item) !important;
+    counter-increment: item;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: scale(0.8);
+}
+.recipe-directions__list li::before {
+    font-size: 20px;
+    font-size: 1.25rem;
+    transform: scale(1);
+}
+ol.list-numbers li::before {
+    color: #b3b3b3;
+    content: counter(item) ". ";
+    counter-increment: item;
+    margin: 0 0 0.5rem -1.5rem;
+    position: absolute;
+}
+.input-circle, .recipe-directions__list li::before {
+    border: solid 1px #cfcfcf;
+    border-radius: 50%;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    width: 42px;
 }
 
-h4 {
-	font-style: italic;
-	color: rgb(8, 8, 8);
-	margin-left: 110px;
+.directions--section__steps {
+    display: inline-block;
+    vertical-align: top;
+    width: 66%;
+}
+.recipe-directions__list--item {
+    margin-left: 32px;
+}
+.recipe-directions__list--item {
+    display: block;
+    margin-left: 28px;
+}
+.recipe-directions__list li {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 26px;
+}
+.recipe-directions__list li {
+    float: left;
+    line-height: 24px;
+    padding-bottom: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.prepTime {
+	margin-left: 16px;
+    clear: both;
+    float: left;
+    margin: 14px 5% 1rem 12px;
+    width: 90%;
 }
