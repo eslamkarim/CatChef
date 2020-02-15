@@ -3,7 +3,9 @@ var AddButton = document.getElementById("addButton");
 var SearchInput = document.getElementById("searchInput");
 var IngredintsHtml = document.getElementById("ingredintsAdded");
 var searchButton = document.getElementById("searchButton");
-var UserIngredientArray=[]
+var recipesPlaceholder = document.getElementById("recipes-placeholder");
+var UserIngredientArray=[];
+var babyArray=[];
 //function to seaarch for an array of words from user in the ingredients array in our dataset and return its count (counting dublicates too ex: if there are 2 sugar words in the array it will print 2)
 function SearchByIngredient(ingredintsArray) {
     var RecipesArray=[];
@@ -22,7 +24,7 @@ function SearchByIngredient(ingredintsArray) {
     var sortedArray = RecipesArray.sort(compare);
     //return the first 20 recipes that match
     var finalResultArray = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 18; i++) {
         if(sortedArray[i].matched != 0)
             finalResultArray.push(SearchByRecipeName(sortedArray[i].title));   
     }
@@ -70,8 +72,44 @@ searchButton.addEventListener('click',function () {
     else{
         SearchInput.value="";
     }
-    var result=SearchByIngredient(UserIngredientArray);
+    babyArray=SearchByIngredient(UserIngredientArray);
     console.log(result);
     UserIngredientArray=[];
     IngredintsHtml.innerHTML=" ";
+    load_recipes();
 });
+
+function load_recipes() {
+    recipesPlaceholder.innerHTML =""
+    for (let i = 0; i < babyArray.length; i++) {
+        recipesPlaceholder.innerHTML +=
+        `<div class=" col-sm-6 col-md-4 col-lg-3 col-xl-2 list-item h-25 my-3 mx-auto">
+            <div class="card w-30 h-30 shadow">
+                <img class="card-img-top" src=${babyArray[i].image} alt="Card image cap">
+                <div class="card-body">
+                    <span class="score">
+                        <div class="score-wrap">
+                            <span class="stars-active" style="width:${babyArray[i].rating * 20}%">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </span>
+                            <span class="stars-inactive">
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </span>
+                    <h5 class="card-title"><a
+                            href="../html/specific_recipe.html?name=${babyArray[i].name}">${babyArray[i].name}</a></h6>
+                        <p class="card-text overflow-hidden">${babyArray[i].description}</p>
+                </div>
+            </div>
+        </div>`
+    }
+}
