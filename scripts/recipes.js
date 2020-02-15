@@ -23,25 +23,27 @@ recipeData = JSON.parse(localStorage.recipes);
 function load_recipes() {
     for (let i = 0; i < 200; i++) {
         recipesPlaceholder.innerHTML +=
-        `<div class="col col-sm-6 col-md-4 col-lg-3 list-item h-25 my-3 mx-auto">
+        `<div class=" col-sm-6 col-md-4 col-lg-3 col-xl-2 list-item h-25 my-3 mx-auto">
             <div class="card w-30 h-30 shadow">
-                <img class="card-img-top" src=${recipeData[i].image} alt="Card image cap">
+                <div class="card-img-container">
+                    <img class="card-img-top" src=${recipeData[i].image} alt="Card image cap">
+                </div>
                 <div class="card-body">
                     <span class="score">
                         <div class="score-wrap">
                             <span class="stars-active" style="width:${recipeData[i].rating * 20}%">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </span>
                             <span class="stars-inactive">
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </span>
                         </div>
                     </span>
