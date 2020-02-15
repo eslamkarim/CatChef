@@ -12,7 +12,10 @@ if (recipeData == undefined || recipeData == ""){
     document.getElementById("recipeDesc").textContent = "- " + recipeData.description;
 
     recipeData.ingredients.forEach(ingredient => {
-        document.getElementById("ingredients").innerHTML += `<h4>- ${ingredient}<h4>`
+        document.getElementById("ingredients").innerHTML +=`<li class="step">
+        <span class="recipe-directions__list--item">${ingredient}
+        </span>
+        </li>`
     });
 
     recipeData.instructions.forEach(instruction => {

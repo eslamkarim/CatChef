@@ -21,7 +21,7 @@
     padding: 0.75rem 3% 0.8rem;
     width: 100%;
 }
-ol, ul{
+ol{
 	list-style-type: none;
 	counter-reset: item;
 }
@@ -69,21 +69,18 @@ ol.list-numbers li::before {
     width: 66%;
 }
 .recipe-directions__list--item {
-    margin-left: 32px;
-}
-.recipe-directions__list--item {
     display: block;
-    margin-left: 28px;
+    margin-left: 40px;
 }
 .recipe-directions__list li {
     font-size: 18px;
     font-size: 1.125rem;
-    line-height: 26px;
 }
 .recipe-directions__list li {
     float: left;
     line-height: 24px;
-    padding-bottom: 1rem;
+	padding-bottom: 1.125rem;
+	line-height: 26px;
     position: relative;
     width: 100%;
 }
@@ -94,4 +91,19 @@ ol.list-numbers li::before {
     float: left;
     margin: 14px 5% 1rem 12px;
     width: 90%;
+}
+ul {
+	display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.prepTime__item:first-child {
+    border-right: none;
+    margin-right: -6px;
+    padding: 0;
+    width: 42px;
 }
