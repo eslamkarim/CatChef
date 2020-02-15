@@ -33,6 +33,19 @@
       </li>
 
       <li class="nav-item">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Search By
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item"  id="search-by-recipes" type="button">Recipes</button>
+          <button class="dropdown-item"  id="search-by-ingradients" type="button">Ingredients</button>
+          
+        </div>
+      </div>
+    </li>
+
+      <li class="nav-item">
         <button class="btn btn-outline-success my-2 my-sm-0" id="login-page" type="submit">Login</button>
         <button class="btn btn-outline-success my-2 my-sm-0" id="sign-up-page" type="submit">Sign Up</button>
       </li>
@@ -78,7 +91,8 @@
 
     window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
   });
-
+  
+  // login && sign up
 
   var loginBtn = document.getElementById('login-page');
   var signUpBtn = document.getElementById('sign-up-page');
@@ -93,19 +107,19 @@
     // window.location.href = '../html/sign_up_page.html';
   });
 
-  // Shimaa
+// search by recipes && ingredients
 
-  // var recipesBtn = document.getElementById('search-by-recipes');
-  // var ingradientsBtn = document.getElementById('search-by-ingradients');
+  var recipesBtn = document.getElementById('search-by-recipes');
+  var ingradientsBtn = document.getElementById('search-by-ingradients');
 
-  // recipesBtn.addEventListener('click' , function(){
-  //   // window.open('../html/search-recipes-page.html');
-  //   window.location.href = '../html/search_recipes_page.html';
-  // });
+  recipesBtn.addEventListener('click' , function(){
+   
+    window.location.href = '../html/search_recipes_page.html';
+  });
 
-  // ingradientsBtn.addEventListener('click' , function(){
-  //   console.log("go to /search_ingradients_page");
-  //   // window.location.href = '../html/search_ingradients_page.html';
-  // });
+  ingradientsBtn.addEventListener('click' , function(){
+    console.log("go to /search_ingradients_page");
+    // window.location.href = '../html/search_ingradients_page.html';
+  });
 
 </script>
