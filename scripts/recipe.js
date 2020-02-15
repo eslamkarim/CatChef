@@ -5,8 +5,11 @@ class Recipe {
     description;
     instructions = new Array();
     rating;
+    prep_time_minutes;
+    cook_time_minutes;
+    total_time_minutes;
 
-    constructor(name, ingredients = null, instructions = null, description = null, image = null, rating = null) {
+    constructor(name, ingredients = null, instructions = null, description = null, image = null, rating = null,prep_time_minutes=null,cook_time_minutes=null,total_time_minutes=null) {
         if (arguments.length == 1) {
             this.name = name;
         }
@@ -21,6 +24,9 @@ class Recipe {
                 this.instructions.push(element);
             });
             this.description = description;
+            this.prep_time_minutes=prep_time_minutes;
+            this.cook_time_minutes=cook_time_minutes;
+            this.total_time_minutes=total_time_minutes;
         }
     }
     setName(name) {

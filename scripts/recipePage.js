@@ -19,10 +19,19 @@ if (recipeData == undefined || recipeData == ""){
     });
 
     recipeData.instructions.forEach(instruction => {
-        // document.getElementById("insructions").innerHTML += `<h4>- ${instruction}<h4>`
         document.getElementById("insructions").innerHTML += `<li class="step">
         <span class="recipe-directions__list--item">${instruction}
         </span>
         </li>`
     });
+    document.getElementById("prep").innerHTML=`<li class="prepTime__item"><span class="far fa-clock"></span></li>
+    <li class="prepTime__item">
+        <p class="prepTime__item--type" aria-hidden="true">Prep</p><span aria-hidden="true"><span class="prepTime__item--time">${recipeData.prep_time_minutes}</span> m</span></time>
+    </li>
+                <li class="prepTime__item">
+            <p class="prepTime__item--type" aria-hidden="true">Cook</p><span aria-hidden="true"><span class="prepTime__item--time">${recipeData.cook_time_minutes}</span> m</span></time>
+        </li>
+                <li class="prepTime__item">
+            <p class="prepTime__item--type" aria-hidden="true">Ready In</p><span aria-hidden="true"><span class="prepTime__item--time">${recipeData.total_time_minutes}</span> m</span></time>
+        </li>`
 }

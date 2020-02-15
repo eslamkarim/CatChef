@@ -24,7 +24,7 @@ readTextFile("../recipes.json", function (text) {
     var id = 1;
     recipeJSON.recipes.forEach(element => {
         var recipeObj = new Recipe(element.title, element.ingredients, element.instructions,
-            element.description, element.photo_url, element.rating_stars);
+            element.description, element.photo_url, element.rating_stars,element.prep_time_minutes,element.cook_time_minutes,element.total_time_minutes);
         recipes.push(recipeObj);
         /********/
         var searchObj = new SearchObject(id, element.title);
