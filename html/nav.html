@@ -46,10 +46,14 @@
         </div>
       </li>
 
-      <li class="nav-item">
-        <button class="btn btn-outline-success my-2 my-sm-0" id="login-page" type="submit">Login</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" id="sign-up-page" type="submit">Sign Up</button>
-      </li>
+    <!-- The drop down after the user logs in -->
+    <div id="signed_in_drop_down">
+
+    </div>
+
+    <div id="sign_in/up_btns">
+
+    </div>
 
       <!-- <li class="nav-item">
         <h5>Search By</h5>
@@ -92,26 +96,18 @@
 
     window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
   });
-
-  // login && sign up
-
-  var loginBtn = document.getElementById('login-page');
-  var signUpBtn = document.getElementById('sign-up-page');
-
-  loginBtn.addEventListener('click', function () {
-    console.log("go to /login_page");
-    // window.location.href = '../html/login_page.html';
-  });
-
-  signUpBtn.addEventListener('click', function () {
-    console.log("go to /sign_up_page");
-    // window.location.href = '../html/sign_up_page.html';
-  });
+  
+  
 
   // search by recipes && ingredients
 
   var recipesBtn = document.getElementById('search-by-recipes');
   var ingradientsBtn = document.getElementById('search-by-ingradients');
+  var signed_in_drop_down = document.getElementById("signed_in_drop_down");
+  console.log(signed_in_drop_down);
+  
+  var unsigned_btns = document.getElementById("sign_in/up_btns");
+
 
   recipesBtn.addEventListener('click', function () {
 
@@ -122,4 +118,56 @@
     window.location.href = '../html/SearchIngredints.html';
   });
 
+  // Handling the nav bar btns;
+  session_storage_data = Object.keys(sessionStorage).length;
+  console.log(session_storage_data);
+  
+  if (session_storage_data > 1){
+    signed_in_drop_down.innerHTML = `
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item"  id="search-by-ingradients" type="button">Show favourits</button>
+                    <button class="dropdown-item"  id="sign_out" type="button">Log out</button>
+                </div>
+            </div>
+        </li>`
+        
+  } else {
+    unsigned_btns.innerHTML = `
+    <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item"  id="login-page" type="button">Log in</button>
+                    <button class="dropdown-item"  id="sign-up-page" type="button">Sign up</button>
+                </div>
+            </div>
+      </li>`
+        var loginBtn = document.getElementById('login-page');
+        var signUpBtn = document.getElementById('sign-up-page');
+
+        loginBtn.addEventListener('click' , function(){
+          window.location.href = "../html/sign_in.html";
+        });
+
+        signUpBtn.addEventListener('click' , function(){
+          window.location.href = "../html/sign_up.html";
+        });
+      }
+
+
+      document.getElementById("sign_out").addEventListener('click', sign_out);
+
+function sign_out(){
+  console.log("logging out");
+  user_key = Object.keys(sessionStorage)[1];
+  sessionStorage.removeItem(user_key);
+  window.location.href = "../index.html";
+}
 </script>
