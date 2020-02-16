@@ -41,7 +41,7 @@ if (localStorage.getItem('recipes') === null) {
 
         localStorage.setItem('recipes', JSON.stringify(recipes));
         localStorage.setItem('searchArr', JSON.stringify(searchArr));
-        setTimeout(function(){ location.reload(); }, 100)
+        setTimeout(function () { location.reload(); }, 2000)
     });
     // location.reload();
     // response.setIntHeader("Refresh", 1);
@@ -50,8 +50,7 @@ if (localStorage.getItem('recipes') === null) {
 
 }
 
-else
-{
+else {
     console.log('recipes already is loaded');
 
     //get array of recipes from localStorage
