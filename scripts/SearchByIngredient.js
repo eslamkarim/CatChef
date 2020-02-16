@@ -73,7 +73,6 @@ searchButton.addEventListener('click',function () {
         SearchInput.value="";
     }
     babyArray=SearchByIngredient(UserIngredientArray);
-    console.log(result);
     UserIngredientArray=[];
     IngredintsHtml.innerHTML=" ";
     load_recipes();

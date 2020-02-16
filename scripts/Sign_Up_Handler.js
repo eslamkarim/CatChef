@@ -25,8 +25,7 @@ document.getElementById("sign_up_btn").addEventListener("click", function(event)
         }
         var key = Math.floor((1 + Math.random()) * 0x10000).toString(16);
         store_in_memory(key, user_object);
-        alert("Success signed up");
-        clear_feilds_after_sign_up();
+        window.location.href = "../html/sign_in.html"
     } if (password != confirm_password) {
         clear_confirmation_password_feild()
         alert("The confirmation password is not matching, please check it back");
