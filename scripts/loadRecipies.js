@@ -48,4 +48,8 @@ readTextFile("../recipes.json", function (text) {
 else
 {
     console.log('recipes already is loaded');
+
+    //get array of recipes from localStorage
+    var recipes = JSON.parse(localStorage.getItem('recipes'));
+
 }
