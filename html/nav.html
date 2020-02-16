@@ -1,17 +1,17 @@
-<nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-sm row align-items-center">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+<nav class="navbar mb-5 navbar-dark bg-dark navbar-expand-md  row align-items-center">
+  <button class="navbar-toggler col-1" type="button" data-toggle="collapse" data-target="#navbar-collapse"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand  mx-sm-auto mx-md-n1 mx-lg-4" href="../index.html">
+  <a class="navbar-brand col-5 col-sm-5 col-md-2 col-lg-4 col-xl-4 mx-auto mx-sm-auto mx-md-n1 mx-lg-4" href="../index.html">
     <img src="../imgs/CatChef.png" width="60" height="60" alt="logo">
     CatChef
   </a>
 
-  <div class="collapse navbar-collapse col-4" id="navbar-collapse">
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
+  <div class="collapse navbar-collapse col-md-10 col-lg-8 col-xl-8" id="navbar-collapse">
+    <ul class="nav navbar-nav col-md-6 col-lg-7 col-xl-7 ml-2">
+      <li class="nav-item">
         <a class="nav-link" href="../index.html" id="home-btn">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -19,20 +19,30 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../html/about_page.html">About</a>
-      </li>
-
-      <li class="nav-item">
+        <select id="search-input-nav" class="selectpicker nav-link"></select>
         <form class="form-inline">
 
-          <!-- <select  class="form-control mr-2" style="width: 200px;" type="search"
-            placeholder="Search" aria-label="Search"> -->
-          <select id="search-input-nav" class="selectpicker mr-2 nav-link"></select>
           <!-- <button class="btn btn-outline-success my-2" type="submit">Search</button> -->
         </form>
       </li>
 
       <li class="nav-item">
+        <a class="nav-link" href="../html/about_page.html">About</a>
+      </li>
+
+      <!-- The drop down after the user logs in -->
+
+
+      <!-- <li class="nav-item">
+        <h5>Search By</h5>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-recipes" type="submit">Recipes</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-ingredients" type="submit">Ingradients</button>
+      </li> -->
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right mr-2 col-12 col-sm-6 col-md-6 col-lg-5 col-xl-5 mx-md-auto">
+      <li>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -40,33 +50,24 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <button class="dropdown-item" id="search-by-recipes" type="button">Recipes</button>
-            <button class="dropdown-item" id="search-by-ingradients" type="button">Ingredients</button>
+            <button class="dropdown-item" id="search-by-ingredients" type="button">Ingredients</button>
 
           </div>
         </div>
       </li>
+      <li class="float-sm-right">
+        <div id="signed_in_drop_down" class="account col-sm-6 col-md-8 col-lg-4">
 
-    <!-- The drop down after the user logs in -->
-    <div id="signed_in_drop_down">
+        </div>
+      </lif>
+      <li class="float-sm-right"> 
 
-    </div>
+        <div id="sign_in/up_btns" class="col-sm-6 col-md-8 col-lg-4 account">
 
-    <div id="sign_in/up_btns">
-
-    </div>
-
-      <!-- <li class="nav-item">
-        <h5>Search By</h5>
-        <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-recipes" type="submit">Recipes</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" id="search-by-ingradients" type="submit">Ingradients</button>
-      </li> -->
-
+        </div>
+      </li>
     </ul>
 
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" id="search-input-nav" type="search" placeholder="Search By" aria-label="Search">
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>  -->
 
   </div>
 </nav>
@@ -94,15 +95,15 @@
 
     window.location.href = '../html/specific_recipe.html?name=' + selectedRecipeName;
   });
-  
-  
+
+
 
   // search by recipes && ingredients
 
   var recipesBtn = document.getElementById('search-by-recipes');
-  var ingradientsBtn = document.getElementById('search-by-ingradients');
+  var ingradientsBtn = document.getElementById('search-by-ingredients');
   var signed_in_drop_down = document.getElementById("signed_in_drop_down");
-  
+
   var unsigned_btns = document.getElementById("sign_in/up_btns");
 
 
@@ -117,8 +118,8 @@
 
   // Handling the nav bar btns;
   session_storage_data = Object.keys(sessionStorage).length;
-  
-  if (session_storage_data > 1){
+
+  if (session_storage_data > 1) {
     signed_in_drop_down.innerHTML = `
         <li class="nav-item">
             <div class="dropdown">
@@ -126,12 +127,12 @@
                 Account
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item"  id="search-by-ingradients" type="button">Show favourits</button>
+                    <button class="dropdown-item"  id="search-by-ingredients" type="button">Show favourits</button>
                     <button class="dropdown-item"  id="sign_out" type="button">Log out</button>
                 </div>
             </div>
         </li>`
-        
+
   } else {
     unsigned_btns.innerHTML = `
     <li class="nav-item">
@@ -145,24 +146,24 @@
                 </div>
             </div>
       </li>`
-        var loginBtn = document.getElementById('login-page');
-        var signUpBtn = document.getElementById('sign-up-page');
+    var loginBtn = document.getElementById('login-page');
+    var signUpBtn = document.getElementById('sign-up-page');
 
-        loginBtn.addEventListener('click' , function(){
-          window.location.href = "../html/sign_in.html";
-        });
+    loginBtn.addEventListener('click', function () {
+      window.location.href = "../html/sign_in.html";
+    });
 
-        signUpBtn.addEventListener('click' , function(){
-          window.location.href = "../html/sign_up.html";
-        });
-      }
+    signUpBtn.addEventListener('click', function () {
+      window.location.href = "../html/sign_up.html";
+    });
+  }
 
 
-      document.getElementById("sign-up-page").addEventListener('click', sign_out);
+  document.getElementById("sign-up-page").addEventListener('click', sign_out);
 
-function sign_out(){
-  user_key = Object.keys(sessionStorage)[1];
-  sessionStorage.removeItem(user_key);
-  window.location.href = "../index.html";
-}
+  function sign_out() {
+    user_key = Object.keys(sessionStorage)[1];
+    sessionStorage.removeItem(user_key);
+    window.location.href = "../index.html";
+  }
 </script>

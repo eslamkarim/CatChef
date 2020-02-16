@@ -1,4 +1,4 @@
-import '../libs/select2/select2.min.js';  
+import '../libs/select2/select2.min.js';
 // assign select2 
 function loadNav() {
     $("#nav-placeholder").load("../html/nav.html");
