@@ -131,7 +131,9 @@
                 </div>
             </div>
         </li>`
-        
+
+      document.getElementById("sign_out").addEventListener('click', sign_out);
+      document.getElementById("user_favs").addEventListener('click', fav_page);
   } else {
     unsigned_btns.innerHTML = `
     <li class="nav-item">
@@ -158,7 +160,6 @@
       }
 
 
-      document.getElementById("sign-up-page").addEventListener('click', sign_out);
 
 function sign_out(){
   user_key = Object.keys(sessionStorage)[1];
