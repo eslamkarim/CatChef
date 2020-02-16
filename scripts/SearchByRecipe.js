@@ -39,6 +39,10 @@ function navSearch(target, recipeName) {
         count = 0
     );
 }
+function addSlashes(str){
+    str = str.replace(/'/g, "\\'");
+    console.log(str)
+}
 
 function updateResult(query, container) {
     let resultList = container;

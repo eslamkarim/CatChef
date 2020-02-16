@@ -104,7 +104,6 @@
   var recipesBtn = document.getElementById('search-by-recipes');
   var ingradientsBtn = document.getElementById('search-by-ingredients');
   var signed_in_drop_down = document.getElementById("signed_in_drop_down");
-
   var unsigned_btns = document.getElementById("sign_in/up_btns");
 
 
@@ -119,8 +118,8 @@
 
   // Handling the nav bar btns;
   session_storage_data = Object.keys(sessionStorage).length;
-
-  if (session_storage_data > 1) {
+  
+  if (session_storage_data > 1){
     signed_in_drop_down.innerHTML = `
         <li class="nav-item">
             <div class="dropdown">
@@ -128,7 +127,7 @@
                 Account
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item"  id="search-by-ingredients" type="button">Show favourits</button>
+                    <button class="dropdown-item"  id="user_favs" type="button">Show favourits</button>
                     <button class="dropdown-item"  id="sign_out" type="button">Log out</button>
                 </div>
             </div>
@@ -159,11 +158,21 @@
   }
 
 
-  document.getElementById("sign-up-page").addEventListener('click', sign_out);
+      document.getElementById("sign_out").addEventListener('click', sign_out);
+      document.getElementById("user_favs").addEventListener('click', fav_page);
 
-  function sign_out() {
-    user_key = Object.keys(sessionStorage)[1];
-    sessionStorage.removeItem(user_key);
-    window.location.href = "../index.html";
-  }
+function sign_out(){
+  console.log("logging out");
+  user_key = Object.keys(sessionStorage)[1];
+  sessionStorage.removeItem(user_key);
+  window.location.href = "../index.html";
+}
+
+
+function fav_page(){
+  window.location.href = "../html/show_favourits.html";
+  console.log("add a new recipe");
+}
+
+
 </script>
