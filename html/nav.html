@@ -103,7 +103,6 @@
   var recipesBtn = document.getElementById('search-by-recipes');
   var ingradientsBtn = document.getElementById('search-by-ingradients');
   var signed_in_drop_down = document.getElementById("signed_in_drop_down");
-  console.log(signed_in_drop_down);
   
   var unsigned_btns = document.getElementById("sign_in/up_btns");
 
@@ -120,7 +119,6 @@
 
   // Handling the nav bar btns;
   session_storage_data = Object.keys(sessionStorage).length;
-  console.log(session_storage_data);
   
   if (session_storage_data > 1){
     signed_in_drop_down.innerHTML = `
@@ -130,7 +128,7 @@
                 Account
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item"  id="search-by-ingradients" type="button">Show favourits</button>
+                    <button class="dropdown-item"  id="user_favs" type="button">Show favourits</button>
                     <button class="dropdown-item"  id="sign_out" type="button">Log out</button>
                 </div>
             </div>
@@ -163,6 +161,7 @@
 
 
       document.getElementById("sign_out").addEventListener('click', sign_out);
+      document.getElementById("user_favs").addEventListener('click', fav_page);
 
 function sign_out(){
   console.log("logging out");
@@ -170,4 +169,12 @@ function sign_out(){
   sessionStorage.removeItem(user_key);
   window.location.href = "../index.html";
 }
+
+
+function fav_page(){
+  window.location.href = "../html/show_favourits.html";
+  console.log("add a new recipe");
+}
+
+
 </script>

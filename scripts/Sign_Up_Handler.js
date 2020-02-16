@@ -21,7 +21,8 @@ document.getElementById("sign_up_btn").addEventListener("click", function(event)
             email: email,
             password: password,
             confirm_password: confirm_password,
-            gender: gender
+            gender: gender,
+            favourits: []
         }
         var key = Math.floor((1 + Math.random()) * 0x10000).toString(16);
         store_in_memory(key, user_object);
