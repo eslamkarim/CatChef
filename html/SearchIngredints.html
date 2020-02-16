@@ -24,12 +24,17 @@
       <div class="col-12 col-md-10 col-lg-8">
         <div>
           <div>
-            <div class="col-auto">
-              <i class="fas fa-search h4 text-body"></i>
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless"
+                type="search" placeholder="Search ingredients" id="searchInput">
             </div>
             <!--end of col-->
             <div class="col">
-              <input id="search-page-input" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+                <div id="ingredintsAdded"></div>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-success my-2" type="submit" id="addButton">Add</button>
+                <button class="btn btn-outline-success my-2" type="submit" id="searchButton">Search</button>
             </div>
             <!--end of col-->
           </div>
@@ -41,28 +46,20 @@
     </div>
   </div>
 
-
-    <div id="card-container" class="row  m-5">
+  <div class="card-deck col-10 mx-auto">
+    <div id="card-container" class="row">
     </div>
-  
+  </div>
 
+    <div class="row m-5" id="recipes-placeholder">
+    </div>
   <script src="../libs/js/jquery/jquery-3.4.1.min.js"></script>
   <script src="../libs/js/popperjs/umd/popper.min.js"></script>
   <script src="../libs/js/bootstrap/bootstrap.min.js"></script>
 
   <script src="../scripts/nav.js" type="module"></script>
-  <script src="../scripts/recipe.js"></script>
   <script src="../scripts/SearchByRecipe.js"></script>
-  <script src="../scripts/GetQueryString.js"></script>
-  <script src="../scripts/loadRecipies.js" type="module"></script>
-
-  <script>
-    var container = document.getElementById("card-container");
-    var searchInput = document.querySelector('#search-page-input');
-    searchInput.addEventListener('input', e=>{
-      updateResult(e.target.value, container)
-    })
-  </script>
+  <script src="../scripts/SearchByIngredient.js"></script>
 </body>
 
 </html>
