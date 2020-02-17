@@ -7,11 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="imgs/CatChef.png">
 
-  <!-- <link rel="stylesheet" href="styles/style.css"> -->
-  <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="libs/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="libs/fontawesome-free-5.12.1-web/css/all.min.css">
-  <link rel="stylesheet" href="../styles/recipes_page.css">
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/index.css">
+
   <title>CatChef</title>
 </head>
 
@@ -22,6 +23,15 @@
     <!--Carousel Wrapper-->
     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
       <!--Slides-->
       <div class="carousel-inner" role="listbox">
 
@@ -29,12 +39,12 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md-4">
-              <div class="card w-30 h-30 shadow">
-                <img class="card-img-top" src="imgs/recipe1-edited.jpg" alt="Card image cap">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="" alt="Card image cap">
                 <div class="card-body">
                   <span class="score">
                     <div class="score-wrap">
-                      <span class="stars-active" style="width:0%">
+                      <span class="stars-active">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -50,8 +60,11 @@
                       </span>
                     </div>
                   </span>
-                  <h5 class="card-title"><a name="recipe_link" href="#">recipe</a></h6>
-                    <p class="card-text overflow-hidden"></p>
+                  <h5 class="card-title"><a href="../html/specific_recipe.html?name="></a></h5>
+                  <p class="card-text overflow-hidden"></p>
+                  <a class="btn btn-warning" href=""><i class="fas fa-heart" aria-hidden="true"></i>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -62,7 +75,7 @@
                 <div class="card-body">
                   <span class="score">
                     <div class="score-wrap">
-                      <span class="stars-active" style="width:0%">
+                      <span class="stars-active">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -78,8 +91,11 @@
                       </span>
                     </div>
                   </span>
-                  <h5 class="card-title"><a name="recipe_link" href="#">recipe</a></h6>
-                    <p class="card-text overflow-hidden"></p>
+                  <h5 class="card-title"><a href="../html/specific_recipe.html?name="></a></h5>
+                  <p class="card-text overflow-hidden"></p>
+                  <a class="btn btn-warning" href=""><i class="fas fa-heart" aria-hidden="true"></i>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -90,7 +106,7 @@
                 <div class="card-body">
                   <span class="score">
                     <div class="score-wrap">
-                      <span class="stars-active" style="width:0%">
+                      <span class="stars-active">
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
                         <i class="fas fa-star" aria-hidden="true"></i>
@@ -106,102 +122,112 @@
                       </span>
                     </div>
                   </span>
-                  <h5 class="card-title"><a name="recipe_link" href="#">recipe</a></h6>
-                    <p class="card-text overflow-hidden"></p>
+                  <h5 class="card-title"><a href="../html/specific_recipe.html?name="></a></h5>
+                  <p class="card-text overflow-hidden"></p>
+                  <a class="btn btn-warning" href=""><i class="fas fa-heart" aria-hidden="true"></i>
+                  </a>
+
                 </div>
               </div>
             </div>
 
           </div>
-          <!--/.Second slide-->
 
         </div>
-          <!--/.First slide-->
+        <!--/.First slide-->
 
-          <!--Second slide-->
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card w-30 h-30 shadow">
-                  <img class="card-img-top" src="imgs/recipe1-edited.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <span class="score">
-                      <div class="score-wrap">
-                        <span class="stars-active" style="width:0%">
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                        </span>
-                        <span class="stars-inactive">
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </span>
-                    <h5 class="card-title"><a name="recipe_link" href="#">recipe</a></h6>
-                      <p class="card-text overflow-hidden"></p>
-                  </div>
+        <!--Second slide-->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <span class="score">
+                    <div class="score-wrap">
+                      <span class="stars-active">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span class="stars-inactive">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </span>
+                  <h5 class="card-title"><a href="../html/specific_recipe.html?name="></a></h5>
+                  <p class="card-text overflow-hidden"></p>
+                  <a class="btn btn-warning" href=""><i class="fas fa-heart" aria-hidden="true"></i>
+                  </a>
+
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-4">
-                <div class="card w-30 h-30 shadow">
-                  <img class="card-img-top" src="imgs/recipe1-edited.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <span class="score">
-                      <div class="score-wrap">
-                        <span class="stars-active" style="width:0%">
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                        </span>
-                        <span class="stars-inactive">
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </span>
-                    <h5 class="card-title"><a name="recipe_link" href="#">recipe</a></h6>
-                      <p class="card-text overflow-hidden"></p>
-                  </div>
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <span class="score">
+                    <div class="score-wrap">
+                      <span class="stars-active">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span class="stars-inactive">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </span>
+                  <h5 class="card-title"><a href="../html/specific_recipe.html?name="></a></h5>
+                  <p class="card-text overflow-hidden"></p>
+                  <a class="btn btn-warning" href=""><i class="fas fa-heart" aria-hidden="true"></i>
+                  </a>
+
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-4">
-                <div class="card w-30 h-30 shadow">
-                  <img class="card-img-top" src="imgs/recipe1-edited.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <span class="score">
-                      <div class="score-wrap">
-                        <span class="stars-active" style="width:0%">
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                          <i class="fas fa-star" aria-hidden="true"></i>
-                        </span>
-                        <span class="stars-inactive">
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                          <i class="far fa-star" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </span>
-                    <h5 class="card-title"><a name="recipe_link" href="#">recipe</a></h6>
-                      <p class="card-text overflow-hidden"></p>
-                  </div>
+            <div class="col-md-4">
+              <div class="card mb-2 h-100">
+                <img class="card-img-top" src="imgs/recipe1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <span class="score">
+                    <div class="score-wrap">
+                      <span class="stars-active">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span class="stars-inactive">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </span>
+                  <h5 class="card-title"><a href="../html/specific_recipe.html?name="></a></h5>
+                  <p class="card-text overflow-hidden"></p>
+                  <a class="btn btn-warning" href=""><i class="fas fa-heart" aria-hidden="true"></i>
+                  </a>
+
                 </div>
               </div>
 
@@ -209,9 +235,41 @@
             <!--/.Second slide-->
 
           </div>
-          <!--/.Slides-->
 
+        </div>
+        <!--/.Second slide-->
 
+      </div>
+      <!--/.Slides-->
+
+      <!--Controls-->
+      <div class="controls-top row justify-content-center">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        &nbsp; &nbsp;
+        <a class="btn-floating" href="#multi-item-example" data-slide="next">
+          <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+  </div>
+  <!-- 
+  <div class="row">
+    <div class="card mb-5 col-7 mx-auto">
+      <div class="row" id ="recipeDay">
+        <div class="col-md-6 align-self-center">
+          <img src="imgs/recipe1.jpg" class="card-img" alt="cookies" id="recipeImg1">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title" id="recipeTitle1">Card title</h5>
+            <p class="card-text" id="recipeText1">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
         </div>
         <!--/.Carousel Wrapper-->
 
@@ -268,15 +326,26 @@
                       <a class="nav-link" href="../html/search_ingradients_page.html" id="recipes-btn">Ingredients</a>
                     </li>
 
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-2 col-sm-6">
-                <!--Column4-->
-                <div class="footer-pad">
-                  <h4>About Us</h4>
-                  <div>
+  <!-- <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-lg-4 footer-about wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+              <img class="logo-footer" src="assets/img/logo.png" alt="logo-footer" data-at2x="assets/img/logo.png">
+              <p>
+                We are a young company always looking for new and creative ideas to help you with our products in your everyday work.
+              </p>
+              <p><a href="#">Our Team</a></p>
+                  </div>
+            <div class="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+              <h3>Contact</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                  <p><i class="fas fa-phone"></i> Phone: (0039) 333 12 68 347</p>
+                  <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a></p>
+                  <p><i class="fab fa-skype"></i> Skype: you_online</p>
+                  </div>
+                  <div class="col-md-4 col-lg-3 footer-social wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <h3>Follow us</h3>
                     <p>
                       We are students
                       at information
@@ -295,23 +364,96 @@
                 <ul class="social-network social-circle">
                   <!-- <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
 
-                  <li><a href="#" class="icoFacebook"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="#" class="icoTwitter"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#" class="icoLinkedin"><i class="fab fa-linkedin"></i></a></li>
-                  <!-- <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li> -->
-                </ul>
-              </div>
+
+
+  <footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+
+              <a class="navbar-brand logo mx-sm-auto mx-md-n1 mx-lg-4" href="../index.html">
+                <img src="../imgs/CatChef.png" width="60" height="60" alt="logo">
+                CatChef
+              </a>
+
             </div>
-            <div class="row">
-              <div class="col-md-12 copy">
-                <p class="text-center">&copy; Copyright 2020 - CatChef. All rights reserved.</p>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <!--Column2-->
+            <div class="footer-pad">
+              <h4>Navigate</h4>
+              <ul class="list-unstyled">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../index.html" id="home-btn">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="../html/recipes_page.html" id="recipes-btn">Recipes</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <!--Column3-->
+            <div class="footer-pad">
+              <h4>Search By</h4>
+              <ul class="list-unstyled">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../html/search_recipes_page.html" id="home-btn">Recipes <span
+                      class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="../html/search_ingradients_page.html" id="recipes-btn">Ingredients</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-6">
+            <!--Column4-->
+            <div class="footer-pad">
+              <h4>About Us</h4>
+              <div>
+                <p>
+                  We are students
+                  at information
+                  technology institute
+                  - ITI Intake 40
+                  <!-- -The goal:
+                Allow user to find the
+                best recipies and use them. -->
+                </p>
               </div>
             </div>
 
+          <div class="col-md-3">
+            <h4>Follow Us</h4>
+            <ul class="social-network social-circle">
+              <!-- <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
 
+              <li><a href="#" class="icoFacebook"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#" class="icoTwitter"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" class="icoLinkedin"><i class="fab fa-linkedin"></i></a></li>
+              <!-- <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li> -->
+            </ul>
           </div>
         </div>
-      </footer>
+        <div class="row">
+          <div class="col-md-12 copy">
+            <p class="text-center">&copy; Copyright 2020 - CatChef. All rights reserved.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
 
 
 

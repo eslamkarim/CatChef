@@ -42,4 +42,3 @@ function user_show_favs() {
 }
 
 user_show_favs()
-
