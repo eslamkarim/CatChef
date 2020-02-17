@@ -61,8 +61,8 @@ function drawCard(signed_in,index){
                         sessionStorage.setItem(user_id, JSON.stringify(user))
                         localStorage.setItem(user_id, JSON.stringify(user)
                         )
-                
                 }
+                stars[index].setAttribute("style","width:"+recipesArray[rand].rating * 20+"%");                
         }
         else{
                 var rand = Math.round(Math.random() * recipesArray.length);
@@ -73,5 +73,6 @@ function drawCard(signed_in,index){
                 detailsButtons[index].onclick= function () {
                         alert("You are not logged in");
                 }
+                stars[index].setAttribute("style","width:"+recipesArray[rand].rating * 20+"%");                
         }
 }
