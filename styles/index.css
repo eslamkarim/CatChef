@@ -1,6 +1,23 @@
 :root {
 	--card-height: 80vh;
 	/* --card-width: ; */
+	--rotd-height: 60vh;
+	--rotd-width: 80vh;
+
+}
+
+#ROTD .card-img-top{
+	max-height: var(--rotd-height);
+	max-width: var(--rotd-width);
+}
+
+#ROTD .card-body{
+	max-height: calc(var(--rotd-height)/3);
+	max-width: var(--rotd-width);
+}
+
+#ROTD .card-text:before {
+	background: none;
 }
 
 .card {
