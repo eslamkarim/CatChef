@@ -1,12 +1,12 @@
 # CatChef
-![](https://forthebadge.com/images/badges/built-with-love.svg) 
-[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://forthebadge.com) 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)<br>
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) 
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) 
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) 
-[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com) 
- 
+![](https://forthebadge.com/images/badges/built-with-love.svg)(https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) 
+[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5)<br>
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) 
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) 
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) 
+[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) 
+
 
 
 <br>
