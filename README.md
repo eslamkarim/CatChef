@@ -1,5 +1,15 @@
 # CatChef
-![](https://forthebadge.com/images/badges/built-with-love.svg)
+![](https://forthebadge.com/images/badges/built-with-love.svg) 
+[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)<br>
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com) 
+ 
+
+
+<br>
 ITI JavaScript Project intake 40
 
 ## Getting Started
@@ -8,9 +18,9 @@ ITI JavaScript Project intake 40
 
 ### Prerequisites
 
---VScode
---Live Server Plugin
---Google Chrome
+--VScode<br>
+--Live Server Plugin<br>
+--Google Chrome<br>
 
 ### Installing
 
@@ -36,11 +46,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [HTML](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - The web framework used
-* [JS](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - Dependency Management
-* [BOOTSTRAP](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - Used to generate RSS Feeds
-* [CSS](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - Used to generate RSS Feeds
-* [JQUERY](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - Used to generate RSS Feeds
+* [HTML](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - The web markeup language
+* [JS](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - The scripting language
+* [BOOTSTRAP](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - Styling libirary
+* [CSS](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) -
+* [JQUERY](https://giphy.com/gifs/VbnUQpnihPSIgIXuZv/html5) - JS libirary
 
 
 ## Contributing
