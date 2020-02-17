@@ -86,3 +86,4 @@ function updateResult(query, container) {
         count = 0
     );
 }
+

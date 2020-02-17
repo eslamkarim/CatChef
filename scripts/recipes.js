@@ -3,7 +3,7 @@
 var recipeData = new Array();
 var recipesPlaceholder = document.getElementById("recipes-placeholder");
 recipeData = JSON.parse(localStorage.recipes);
-var babyArray=[] //small array to hold 18 elements only with no correlation to pagination
+var babyArray = [] //small array to hold 18 elements only with no correlation to pagination
 
 
 // var paginationContainer = document.querySelector('#pagination-container');
@@ -22,16 +22,16 @@ var babyArray=[] //small array to hold 18 elements only with no correlation to p
 function paginate(pageNumber) {
     var showFrom = perPage * (pageNumber - 1);
     var showTo = showFrom + perPage;
-    babyArray=items.slice(showFrom, showTo);
+    babyArray = items.slice(showFrom, showTo);
     load_recipes();
     $(window).scrollTop(0);
 }
 //Draw the html elements of the recipes
 function load_recipes() {
-    recipesPlaceholder.innerHTML =""
+    recipesPlaceholder.innerHTML = ""
     for (let i = 0; i < babyArray.length; i++) {
         recipesPlaceholder.innerHTML +=
-        `<div class=" col-sm-6 col-md-4 col-lg-3 col-xl-2 list-item h-25 my-3 mx-auto">
+            `<div class=" col-sm-6 col-md-4 col-lg-3 col-xl-2 list-item h-25 my-3 mx-auto">
             <div class="card w-30 h-30 shadow">
                 <img class="card-img-top" src=${babyArray[i].image} alt="Card image cap">
                 <div class="card-body">
@@ -73,7 +73,7 @@ $('#pagination-container').pagination({
     itemsOnPage: perPage,
     prevText: "&laquo;",
     nextText: "&raquo;",
-    onPageClick: function(p){
+    onPageClick: function (p) {
         paginate(p);
     }
 });
