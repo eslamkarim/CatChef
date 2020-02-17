@@ -35,21 +35,23 @@ for (let i = 0; i < 6; i++) {
 function displaySlideShow() {
         if (slide == 1) {
                 for (var i = 0; i < 3; i++) {
-                        var randomRecipes = Math.round(Math.random() * recipesArray.length);
-                        slideShow[i].setAttribute("src", recipesArray[randomRecipes].image);
-                        recipeTitle[i].textContent = recipesArray[randomRecipes].name;
-                        recipeText[i].textContent = recipesArray[randomRecipes].description;
-                        detailsButtons[i].setAttribute("href","../html/specific_recipe.html?name="+recipesArray[randomRecipes].name);
+                        var rand = Math.round(Math.random() * recipesArray.length);
+                        cardimages[i].setAttribute("src", recipesArray[rand].image);
+                        cardTitles[i].textContent = recipesArray[rand].name;
+                        cardText[i].textContent= recipesArray[rand].description;
+                        detailsButtons[i].setAttribute("href","../html/specific_recipe.html?name="+recipesArray[rand].name);
+                        console.log(cardTitles);
+                        
                 }
                 slide = 2;
         }else{
                 for (var i = 3; i < 6; i++) {
-                        var randomRecipes = Math.round(Math.random() * recipesArray.length);
-                        slideShow[i].setAttribute("src", recipesArray[randomRecipes].image);
-                        recipeTitle[i].textContent = recipesArray[randomRecipes].name;
-                        recipeText[i].textContent = recipesArray[randomRecipes].description;
-                        detailsButtons[i].setAttribute("href","../html/specific_recipe.html?name="+recipesArray[randomRecipes].name);
-                }
+                        var rand = Math.round(Math.random() * recipesArray.length);
+                        cardimages[i].setAttribute("src", recipesArray[rand].image);
+                        cardTitles[i].textContent = recipesArray[rand].name;
+                        cardText[i].textContent= recipesArray[rand].description;
+                        detailsButtons[i].setAttribute("href","../html/specific_recipe.html?name="+recipesArray[rand].name);
+                                }
                 slide = 1;
         }
 }
