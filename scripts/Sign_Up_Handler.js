@@ -70,12 +70,15 @@ function email_exists(email){
     users = [];
 
     for(i=0; i < local_storage_keys.length; i++){
-        users[i] = JSON.parse(window.localStorage.getItem(local_storage_keys[i]));
-        if (email == users[i].email){
-            alert("The email you entered exists.");
-            clear_email_feild();
-            return false;
-        }
+        if(local_storage_keys[i].localeCompare("recipe_date")!=0){
+            users[i] = JSON.parse(window.localStorage.getItem(local_storage_keys[i]));
+            if (email == users[i].email){
+                alert("The email you entered exists.");
+                clear_email_feild();
+                return false;
+            }
+        }else
+            continue;
     }
-    return true;
+    return true;    
 }

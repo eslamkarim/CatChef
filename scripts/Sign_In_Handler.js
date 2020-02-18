@@ -29,13 +29,16 @@ function sign_in(email, password){
 
     for(i=0; i < local_storage_keys.length; i++){
         user_key = local_storage_keys[i];
-        user_data = JSON.parse(window.localStorage.getItem(user_key));
+        if(user_key.localeCompare("recipe_date")!=0){
+            user_data = JSON.parse(window.localStorage.getItem(user_key));
         if (email == user_data.email && password == user_data.password){
             sessionStorage.setItem(user_key, JSON.stringify(user_data));
             signed_in_user = user_key;
             flag_signed_in = true;
             return true;
         }
+        }else
+            continue;
     }
     return false;
 }
