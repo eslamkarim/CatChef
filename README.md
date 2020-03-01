@@ -24,25 +24,20 @@ ITI JavaScript Project intake 40
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+just go to
+https://catchef.000webhostapp.com <br>
+and wait for it to reload
 
-Say what the step will be
 
-```
-Give the example
-```
+## features
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+--See random recipes on the home page<br>
+--recipe of the day on the homepage<br>
+--browse all recipes on the recipes page<br>
+--Search by recipe name<br>
+--Search by ingredints<br>
+--Each recipe has a page with ingredints and instructions on how to do it<br>
+--You can sign up and favorite recipes from the home page and check your favorites on the favorites page when you log in <br>
 
 ## Built With
 
