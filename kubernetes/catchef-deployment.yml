@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catchef-deployment
+  labels:
+    app: catchef
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: catchef
+  template:
+    metadata:
+      labels:
+        app: catchef
+    spec:
+      containers:
+      - name: catchef
+        image: eslamkarim/catchef:v1
+        ports:
+        - containerPort: 80
+        resources:
+            requests:
+              cpu: "1"
+              memory: 1Gi
+            limits:
+              cpu: "1"
+              memory: 1Gi
